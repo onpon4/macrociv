@@ -1,0 +1,484 @@
+=================================
+Macrociv Ruleset for Freeciv v2.6
+=================================
+
+
+OBJECTIVES:
+-----------
+
+This ruleset is designed to take the Civ2Civ3 ruleset and make it
+simpler, more reflective of the real world, and most importantly, less
+tedious to play. I ran through a lot of ideas for how to do this, but
+the method I settled on here was to eliminate all buildings and replace
+them with advances that do the same thing, or a similar thing.
+
+On the realism front, I made a large number of changes to add in
+elements from the real world that are missing in all Freeciv rulesets I
+have played, such as the function and effect of nuclear weapons and the
+way governments work. It's not 100% as I'd like it to be, but I think I
+managed to achieve a fair amount on this front given the limitations of
+the engine.
+
+I plan on keeping this ruleset up-to-date with future releases, and also
+possibly improving it further if I get any ideas and/or the engine makes
+something new possible.
+
+This ruleset is meant to be both a single-player and a multiplayer
+ruleset, but some of the changes made render the AI inept, which makes
+single-player games absurdly easy. To work around this, I would
+recommend using the "Cheating" AI difficulty. See the UNMET GOALS
+section at the end for an explanation of this and other shortcomings of
+this ruleset as it currently stands.
+
+
+CORE CHANGES:
+-------------
+
+This ruleset uses Civ2Civ3 as a starting template and maintains a lot of
+similarities with that ruleset; however, many changes have been made. A
+list of the most noteworthy changes follows. This is not 100%
+exhaustive, but covers all of the most important points regarding what
+sets this ruleset apart:
+
+- All buildings have been removed, and their effects have been
+  reassigned to the discovery of the technologies you previously needed
+  to build them, or in some cases, to a combination of said technology
+  and a city reaching a particular size. Barracks is a special case; its
+  effect has been assigned to Warrior Code, which also gives players
+  a better reason to want to research it. Advances that only affect
+  cities after a certain minimum size include:
+
+  - Library (Writing advance) - size 3
+  - Harbor (Seafaring advance) - size 2
+  - University (University advance) - size 3
+  - Factory (Industrialization advance) - size 5
+  - Power Plant (Refining advance) - size 6
+  - Hydro Plant (Electronics advance + river) - size 6
+  - Nuclear Plant (Nuclear Power advance) - size 6
+  - Mfg. Plant (Plastics advance) - size 9
+
+- The effects of power plants have been consolidated in such a way as to
+  always give the best possible effect for any given city.
+  Additionally, since learning Environmentalism is impossible without
+  also learning Refining, Environmentalism doesn't include a
+  production bonus effect, as that would be redundant; instead, the
+  discovery of Environmentalism simply eliminates all pollution from
+  production and prevents the Nuclear Accident disaster from occurring.
+
+- With the exception of the Library, University, and Research Lab
+  effects (now assigned to the discovery of Writing, University, and
+  Computers, respectively), all culture production from former buildings
+  has been removed.  You now mostly gain culture points from wonders of
+  the world.
+
+- Tech costs have been reverted to Classic style, although the numbers
+  used cause costs to rise a bit less exponentially than in the Classic
+  ruleset.
+
+- Tech upkeep costs have been introduced for real (the Civ2Civ3 ruleset
+  nominally had these, but had them set so low that they never showed up
+  at all until nearly the very end of the tech tree). The gameplay
+  result is that you need to constantly improve your research speed
+  (typically by a combination of acquiring new land, establishing trade
+  routes, and learning science-boosting techs), and that shrinking
+  nations may start losing technology, accelerating their defeat (this
+  is especially common when a nation is devastated by civil war). Tech
+  costs start becoming non-zero around the second tech level or so and
+  continue to rise along with tech costs.
+
+- The tech tree has received a huge makeover. It's recognizable compared
+  to before, but rather different. Rearrangements were made for reasons
+  such as making the tree make more sense, eliminating "dead ends" in
+  research (Fusion Power now directly or indirectly depends on every
+  other tech in the tree), or extending the amount of time a certain
+  tech level is used. I tried to make it so that every technological age
+  is around long enough to be meaningful.
+
+- One of the most noteworthy tech tree changes is that the Galleon and
+  Frigate have been split into two separate techs: the Galleon requires
+  Navigation as before, but the Frigate now requires Metallurgy, which
+  now lists Navigation as a requirement.
+
+- The City Walls effect (provided by Masonry to cities size 4 and above)
+  is now eliminated when any player discovers Metallurgy, and cities
+  stop drawing walls when their owner discovers Railroad (which requires
+  Metallurgy). This is designed to simulate how city walls became
+  obsolete with the use of cannons in the real world, and to make land
+  invasions more effective in the modern era. The population loss
+  prevention benefit is restored and expanded to all cities with the
+  discovery of Leadership.
+
+- A new advance, Relativity, has been added (required by Nuclear
+  Fission).
+
+- Ironclads and later ships have had their hitpoints increased, so that
+  a fight between an ironclad and a wooden ship more or less simulates
+  the curb-stomp conditions of real-world ironclads.
+
+- Elephants are now made obsolete by Knights, and Chariots are made
+  obsolete by Crusaders; these both were previously made obsolete by
+  Dragoons.
+
+- Warriors have now been designated as explorer units, which prevents
+  players from being given free Explorer units long before they are
+  available in the tech tree. This also forces players at the beginning
+  to be mindful of terrain and makes players unable (due to zones of
+  control) to explore the entire continent they start on without the aid
+  of allies.
+
+- Warriors now have the ability of marines to attack from ships, and are
+  the first such unit (instead of Legions).
+
+- Pre-modern ships (that is to say Triremes, Caravels, Galleons,
+  Frigates, and Ironclads) now lose 2 hitpoints every turn they end on a
+  Deep Ocean tile. This is designed to simulate the risk of running out
+  of food faced by real-world sail ships. Galleons and Frigates have
+  more hitpoints than Caravels, so they are effectively able to travel a
+  much longer distance through deep oceans (simulating advances in
+  sailing technique over time). Starting with the Destroyer and
+  Transport, this effect is removed. (Ironclads maintain this effect
+  because they exist in the same technological era as sail ships.)
+
+  - The AI is incapable of dealing with this effect, so it is disabled
+    for them. See the UNMET GOALS section below for a detailed
+    explanation.
+
+- The Battleship's hitpoints are no longer greater than smaller warships
+  of its era (due to increases in hitpoints for them), making them less
+  domineering in naval warfare, while the Carrier has been reduced in
+  cost and had its defense increased to 12 (the same as the attack and
+  defense values of the Battleship), making the battleship pretty
+  clearly an inferior choice compared to carriers. Additionally,
+  battleships now become obsolete by carriers. This is meant to reflect
+  the reality of battleships, which is that while they had advantages
+  for a short period of time, their disadvantages quickly outweighed
+  their advantages and they became obsolete before long as a result.
+  This is also designed to make carriers more competitive as naval
+  units.
+
+- Hitpoints of all air units have been increased to line up with the
+  increased hitpoints of modern warships, and bombers have regained the
+  attack values of the Classic ruleset (they were reduced in Civ2Civ3).
+  Fighters and Stealth Fighters have also had their attack increased a
+  bit to make them more competitive, while the defense of Stealth
+  Bombers has been reduced to make them more vulnerable to
+  counterattack.
+
+- Helicopters no longer have the Bombard ability, and have had their
+  hitpoints increased to line up with the other air units. Other than
+  that, they remain the same, making them most effective as transports,
+  but still competitive.
+
+- Modern land units have had their hitpoints increased. Modern infantry
+  has 40 hitpoints, while modern wheeled units have 50 hitpoints. This
+  is meant to line up the hitpoints of ground units with those of air
+  and sea units. It also makes modern land units much more powerful than
+  old-school musketeers, which makes more sense anyway.
+
+- Armor has been renamed to Tank and no longer renders Cavalry obsolete.
+  Cavalry is still potentially useful, especially because roads can no
+  longer be built on most of the terrain that Big Land units cannot
+  enter and there is more of that terrain. Of course Alpine Troops and
+  Partisans are usually a better choice, but there can be limited
+  circumstances where one might want to build and use Cavalry in modern
+  warfare. (Incidentally, this is true in the real world, too.)
+
+- Desert and Glacier tiles, like Mountains, now cannot be traversed by
+  "big land" units without roads.
+
+- It is now impossible to build roads on Mountains, Forest, Jungle, and
+  Swamp tiles.
+
+- Hills are no longer considered to be "mountainous" by the map
+  generator. Instead, they appear in cold regions.
+
+- Hills, Swamp, and Tundra tiles cannot be irrigated. Swamp tiles have
+  one extra food resource to make up for this, since mines cannot be
+  built on them either.
+
+- Roads no longer provide any resource bonuses. They exist solely to
+  ease movement of units.
+
+- Desert tiles now require 3 movement points to traverse (like
+  Mountains).
+
+- When any land unit ends its turn on a Desert, Glacier, or Mountains
+  tile, it loses HP (3 HP for Desert and Glacier, 2 HP for Mountains).
+  This is designed to simulate such formations creating natural
+  protective barriers in real life. The presence of a city, fort, river,
+  irrigation, or oasis prevents this effect.
+
+  - The Cheating AI difficulty is exempt from this effect.
+
+- Cities can now be founded on mountains and glaciers.
+
+- Global warming and nuclear winter tile changes have been modified to
+  be more catastrophic and make a little more sense.
+
+- It now takes longer to clean pollution, and massively longer to clean
+  fallout. This is designed to discourage strategies of "pollute but
+  then clean up", which make no sense and don't work in the real world.
+
+- Irrigation and mining transformations are now only possible with
+  Engineers, and only after the discovery of Fusion Power. This forces
+  players to deal with the land that they have rather than engaging in
+  endless terraforming.
+
+- Roads and rivers are not restricted infrastructure even if the
+  "restrictinfra" server setting is enabled.
+
+- Roads are no longer built automatically on city center tiles that
+  can't support them. This is because some terrain types are no longer
+  allowed to have roads, so it creates a weirdness when Railroads are
+  discovered.
+
+- The Apollo Program wonder no longer cancels out any previous effects.
+
+- The space race has been removed entirely.
+
+- SDI Defense has been removed. There is no longer any way to become
+  immune to nuclear weapons.
+
+- Base cost of both Cruise Missile and Nuclear have been reduced
+  substantially, to make these weapons more viable. The new cost of
+  Nuclear is now the same as the original cost of Cruise Missile.
+
+- Nuclear-capable nations now get massive AI Love boosts (after the
+  Manhattan Project wonder is built); the effect is doubled with the
+  capability of a nation to use Nuclear ICBMs. This is meant to
+  simulate the real-world fear of Mutually Assured Destruction.
+
+- The discovery of Superconductors (along with the Manhattan Project)
+  makes it possible to build Nuclear ICBMs. Nuclear ICBMs are similar to
+  Nuclear, but are able to "paradrop" practically speaking anywhere in
+  the world (given the max range possible for paradrops, 65534). At
+  least one nation being capable of building Nuclear ICBMs doubles the
+  "AI Love" boost granted by the Manhattan Project.
+
+- Diplomats and Settlers have both had their build cost reduced, since
+  they are (generally) single use units and being expensive makes using
+  them much less practical.
+
+- Caravans and Freights have had their cost substantially reduced (to
+  encourage establishing more trade routes and make doing so easier),
+  and they no longer can do the "Help Build Wonder" action, since the
+  reduced cost makes the action not especially useful.
+
+- The Anarchy government has been changed to better reflect what anarchy
+  is about. Most notably, a society under anarchy now will never succumb
+  to civil war, is absent of corruption, can inspire partisans, and does
+  not lose efficiency with distance to the capital; but is somewhat
+  inefficient at production, utilizes trade only for luxuries, and is
+  very strongly anti-war. No aggressive military units are tolerated,
+  with each one creating two unhappy citizens (like under Democracy in
+  the Classic ruleset), and it also has a senate that can prevent the
+  declaration of war. Additionally, martial law cannot be enforced and
+  methods of preventing military unhappiness don't work under Anarchy.
+
+- The Communism government has been renamed to "Bolshevism". Bolshevik
+  governments do not get military unhappiness, have a flat corruption
+  rate, and get no production waste, but are highly susceptible to civil
+  war (80%). Everything else is the same as the Communism government of
+  Civ2Civ3.
+
+- The set of units barbarians are allowed to use has been tweaked. Of
+  particular note, the level of tech barbarians are allowed to use is
+  higher (up to and including modern infantry), and pirates now start
+  with Warriors instead of Legions, making them less devastating at the
+  start.
+
+- Barbarians are now allowed to inspire partisans the same as normal
+  players.
+
+- AI players are less prone to going to war, more prone to settling new
+  territory, and more prone to establishing trade routes, by default.
+  These behaviors are more conducive to the way Macrociv is optimally
+  played.
+
+- The Statue of Liberty no longer eliminates the period of anarchy when
+  inciting a revolt; it just allows any government to be chosen and
+  negates senate effects.
+
+
+OPTIONAL RULES:
+---------------
+
+This ruleset defaults to different settings than both Classic and
+Civ2Civ3:
+
+- 15 players by default (the smallest I could manage while generating
+  the maps the way I wanted it to), FRACTAL generator, cylindrical, 100
+  tiles per player, no tiny islands, landmass 15%. The effect of this is
+  to generate a couple large continents separated by deep ocean
+  (preventing triremes from being sufficient to discover all players and
+  most continents).
+
+- Temperature 60, steepness 10, wetness 20. This leads to occasional
+  mountain ranges and a large number of deserts, with fertile land
+  mostly in temperate areas. (Creating a large number of deserts helps
+  to make the change rendering deserts dangerous to traverse more
+  meaningful.)
+
+- Poles are allowed to merge with continents (though in practice they
+  usually don't).
+
+- 500 specials, 100 huts.
+
+- Starting units: two city founders, two OK defenders, four explorers
+  (note that the explorers are actually Warriors at a low techlevel, so
+  this is the same result as having six OK defenders in practice).
+
+- AI traits are randomized.
+
+- City minimum distance is 2, but migration is enabled (distance 0,
+  which in reality means a distance of 2 and means that cities need to
+  be a 3 tiles apart to ensure no migration). Citizens consider
+  migrating every other turn, do not limit their migration based on
+  food, and have a 90% chance of migrating to better cities in the same
+  nation (30% chance for foreign cities). This is designed to prevent a
+  "city smallpox" effect in a more organic way; cities that are too
+  close together will simply end up merging into the best of them over
+  time, but it's possible to have two cities relatively close together
+  as long as you can discourage people from emigrating to nearby cities.
+  I think this makes things much more fun and dynamic.
+
+- Starting tech level is 0 once again.
+
+- Borders expand to the unknown, revealing unknown tiles. They prevent
+  military aggression, do not restrict infrastructure, and are fogged
+  (i.e. fog of war prevents you from seeing enemy border changes).
+
+- The killstack setting has been disabled; if multiple units are on a
+  single tile, you have to kill them one at a time. This is actually
+  meant to make invasions easier and more effective; since killstack
+  doesn't apply to cities, it creates a strong bias in favor of
+  defending cities, which lends itself to stalemates.
+
+- Unreachable units do not protect reachable ones. Unnecessary with
+  killstack disabled.
+
+- Raging hordes of barbarians start appearing right from the start. The
+  most noteworthy effect of this is to make exploring huts a bit
+  dangerous.
+
+- Successful attackers move to occupy the tile of their target if
+  possible.
+
+- Revolutions last 1-7 turns. This does not decrease over time.
+
+- Civil wars are possible starting at size 2. I decided to do this so
+  that civil wars become more commonplace, which can help to accelerate
+  the death of a failing nation and also serves to introduce new
+  nations.
+
+- The game ends after 400 turns. Players can win before then with their
+  allies via world dominance.
+
+
+UNMET GOALS:
+------------
+
+The Freeciv engine has come a long way, and I must thank the developers
+of Freeciv for all of their great work. That being said, there were some
+goals I wasn't able to achieve due to engine limitations, so I'd like to
+briefly discuss those here, partly as a conversation starter and partly
+to show what I'd like to think about doing in the future if it becomes
+possible.
+
+- The AI completely fails to adapt to the changes in this ruleset, and I
+  wasn't particularly successful in my attempts to make it work well. On
+  a minor note, the AI wasn't able to understand that cities need to be
+  built further apart, so I decided to default to a citymindist value of
+  2 instead of 1 as I originally intended. But far more importantly, the
+  AI is stuck in this mentality of never, ever moving units that are
+  damaged, so as soon as one of its units enters terrain that drains HP,
+  it just allows it to sit there until it dies. The worst effect of this
+  is that AI players are *terrible* at sea exploration in the age of
+  discovery (post-trireme and pre-Transport), because it just sends its
+  boats into the deep ocean, panics when they start losing health, and
+  just lets them sit there forever. I can only assume this problem is
+  caused by the AI having a hardcoded expectation that sitting still
+  will lead to restoration of HP. I tried to switch it up to use the
+  fuel system, but that led to the AI not deploying ships at all, so I
+  ended up deciding to give (non-Experimental) AI players an exemption
+  to the HP draining effect for deep ocean tiles and sail ships.
+
+- Originally I had citymindist set to 1, but I found that the AI was
+  unable to cope; it kept on building cities right next to each other in
+  an exercise of futility, wasting a lot of time and resources. To
+  minimize this, I decided that it was an acceptable compromise to set
+  citymindist to 2 instead. Of course, this can be adjusted by players.
+
+- I wanted to rename Anarchy to something else and redefine Anarchy as
+  a permanent government with unique properties, but this is currently
+  not feasible as some text hardcodes the word "anarchy" in reference to
+  revolutions. That being said, I did come up with a reasonable
+  compromise in the way I modified the Anarchy government's description
+  and properties, which sort of justifies a need for constant revolution
+  to maintain Anarchy (if you want to do so), and a reason why you
+  (as an elite with imperial ambitions) probably shouldn't.
+
+- I wanted to extend guerrilla warfare to the ancient world (and make
+  Warriors, Musketeers, and Riflemen act as partisans in their
+  respective eras), but the engine currently only allows one unit to be
+  flagged as a partisan.
+
+- I was interested in modifying guerrilla warfare so that partisans
+  would be generated by events other than loss of a city (I was
+  specifically thinking it would be cool for partisans to spawn more or
+  less constantly up to a certain limit while enemy units are present).
+  Since the behavior of spawning partisans is hardcoded, this was
+  impossible.
+
+- The revolution government currently has a hardcoded effect which
+  forces taxes to be assigned a particular way. I wanted to create a
+  modified fixed ratio (including both science and luxuries) for a
+  version of the Anarchy government that is a target government, but
+  since the "force to luxuries" effect is hardcoded to work on the
+  revolution government and is not configurable, I wasn't able to do
+  this.
+
+- I wanted to make Freeciv able to simulate the real-life "mutually
+  assured destruction" scenario we have from nuclear weapons. I was able
+  to come very close to that goal; nuclear ICBMs can be launched
+  anywhere and are virtually unstoppable, yet give target players enough
+  time to launch a retaliatory strike. Still, though, it's impossible
+  for nuclear weapons to destroy cities, which I think limits the
+  destruction too much; it would be nice if a nuclear explosion could
+  destroy cities under a certain size threshold (preferably via
+  effects). Still, a full-scale nuclear war does create massive
+  destruction in the form of nuclear winter, so it's not too bad. (This
+  is actually why it now takes such an absurd amount of time to clean
+  fallout; it's meant to increase the devastation caused by nuclear
+  war and minimize players' ability to subvert it.)
+
+- I wanted to entice the AI players to stockpile defensive nuclear
+  weapons for retaliatory strikes, but there is currently no way to do
+  so. AI players also in general don't grasp the importance of nukes in
+  this ruleset, which leaves them vulnerable in the nuclear age.
+
+- One important aspect of this ruleset was to try to simulate the era of
+  peace brought on by the threat of mutually assured destruction from
+  nukes. The best way I found to achieve this, given the current engine,
+  is to award all players "AI love" points. This implementation is not
+  perfect, however; truly achieving my goal on this would require a
+  change to the AI so that they can be made to value peace, rather than
+  thinking single-mindedly about conquest. A huge problem here is the
+  fact that the AI functions on a "How much do I love or hate nation X?"
+  way of thinking, rather than a more practical "Is it better for me to
+  fight nation X or make peace with them?" approach.
+
+- This one's a bit of a tangent, but as I was working on this ruleset,
+  I got to thinking that it would be real nice if you could enter into
+  a treaty with other nations making one of you a "puppet state" of the
+  other. A puppet would be in a special state where it is controlled by
+  its own leader, but where taxes, science, and gold expenditure are all
+  pooled together in the hands of the ruling nation, certain puppet
+  decisions can be vetoed by the ruling nation, and just in general the
+  puppet is treated by the game as if it's simply a part of the ruling
+  nation, just with small decisions like what units to build and what to
+  do with them in the hands of the puppet's leader. Then you could have
+  a "war of independence" mechanic so the puppet can become independent
+  again later on (or the puppet could choose to remain that way, in
+  which case they could share a victory with the ruling nation).
+

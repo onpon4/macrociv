@@ -1,0 +1,5 @@
+See macrociv/README.macrociv for info about this ruleset.
+
+To install, simply drop the macrociv subdirectory and macrociv.serv into
+your Freeciv 2.6 mods folder (typically ~/.freeciv/2.6 on Linux
+systems). Choose "macrociv" from the ruleset list in Freeciv to play.
