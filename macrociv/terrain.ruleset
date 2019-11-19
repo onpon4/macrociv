@@ -1447,7 +1447,6 @@ removal_time   = 0
 native_to      = "Land", "Small Land", "Merchant", "Big Land"
 conflicts      = "Airstrip", "Airbase"
 hidden_by      = "Fortress"
-flags          = "NativeTile"
 ; /* xgettext:no-c-format */
 helptext       = _("\
 Forts are rapidly-built fortifications providing some defense (+50%) \
@@ -1481,7 +1480,6 @@ build_time     = 2
 removal_time   = 0
 native_to      = "Land", "Small Land", "Merchant", "Big Land"
 conflicts      = "Airstrip", "Airbase"
-flags          = "NativeTile"
 helptext       = _("\
 Fortresses are more permanent forts; construction on them can only begin \
 once the underlying fort is complete. Forts on River tiles cannot be \
@@ -1521,7 +1519,7 @@ reqs           =
 build_time     = 2
 removal_time   = 0
 native_to      = "Air", "Helicopter", "Missile"
-conflicts      = "Fort", "Fortress"
+conflicts      = "Fort", "Fortress", "Ruins"
 hidden_by      = "Airbase"
 flags          = "Refuel"
 helptext       = _("\
@@ -1563,7 +1561,7 @@ reqs           =
 build_time     = 2
 removal_time   = 0
 native_to      = "Air", "Helicopter", "Missile"
-conflicts      = "Fort", "Fortress"
+conflicts      = "Fort", "Fortress", "Ruins"
 flags          = "Refuel"
 helptext       = _("\
 Airbases are more permanent airstrips; construction on them can only \
@@ -1626,10 +1624,18 @@ reqs           =
     }
 buildable      = FALSE
 removal_time   = 0
+native_to      = "Land", "Small Land", "Merchant", "Big Land"
+conflicts      = "Airstrip", "Airbase"
+hidden_by      = "Fort"
 flags          = "TerrChangeRemoves"
+; /* xgettext:no-c-format */
 helptext       = _("\
-Ruins mark the former site of a city that was destroyed or abandoned. \
-They have no effect on gameplay.\
+Ruins are the remains of former cities, left behind when a city is \
+destroyed or disbanded. They provide a 25% defensive bonus against land \
+units, and they also provide shelter from hostile elements, preventing \
+units from losing HP due to the effects of terrain. These effects are \
+redundant on a tile which also has a Fort (which provides a better \
+version of these same effects).\
 ")
 
 [extra_road]

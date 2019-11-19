@@ -246,6 +246,7 @@ reqs    =
       "Extra", "River", "Local", FALSE
       "Extra", "Irrigation", "Local", FALSE
       "Extra", "Fort", "Local", FALSE
+      "Extra", "Ruins", "Local", FALSE
       "Resource", "Oasis", "Local", FALSE
       "AI", "Cheating", "Player", FALSE
     }
@@ -269,6 +270,7 @@ reqs    =
       "Extra", "River", "Local", FALSE
       "Extra", "Irrigation", "Local", FALSE
       "Extra", "Fort", "Local", FALSE
+      "Extra", "Ruins", "Local", FALSE
       "Resource", "Oasis", "Local", FALSE
       "AI", "Cheating", "Player", FALSE
     }
@@ -291,6 +293,7 @@ reqs    =
       "CityTile", "Center", "Local", FALSE
       "Extra", "River", "Local", FALSE
       "Extra", "Fort", "Local", FALSE
+      "Extra", "Ruins", "Local", FALSE
       "AI", "Cheating", "Player", FALSE
     }
 
@@ -312,6 +315,7 @@ reqs    =
       "CityTile", "Center", "Local", FALSE
       "Extra", "River", "Local", FALSE
       "Extra", "Fort", "Local", FALSE
+      "Extra", "Ruins", "Local", FALSE
       "AI", "Cheating", "Player", FALSE
     }
 
@@ -333,6 +337,7 @@ reqs    =
       "CityTile", "Center", "Local", FALSE
       "Extra", "River", "Local", FALSE
       "Extra", "Fort", "Local", FALSE
+      "Extra", "Ruins", "Local", FALSE
       "AI", "Cheating", "Player", FALSE
     }
 
@@ -354,6 +359,7 @@ reqs    =
       "CityTile", "Center", "Local", FALSE
       "Extra", "River", "Local", FALSE
       "Extra", "Fort", "Local", FALSE
+      "Extra", "Ruins", "Local", FALSE
       "AI", "Cheating", "Player", FALSE
     }
 
@@ -448,6 +454,24 @@ value   = 50
 reqs    =
     { "type", "name", "range", "present"
       "Extra", "Fortress", "Local", TRUE
+    }
+
+[effect_ruins_defense]
+type    = "Defend_Bonus"
+value   = 25
+reqs    =
+    { "type", "name", "range", "present"
+      "Extra", "Ruins", "Local", TRUE
+      "Extra", "Fort", "Local", FALSE
+;      "UnitClass", "Land", "Local", FALSE
+;      "UnitClass", "Small Land", "Local", FALSE
+;      "UnitClass", "Big Land", "Local", FALSE
+;      "UnitClass", "Merchant", "Local", FALSE
+      "UnitClass", "Sea", "Local", FALSE
+      "UnitClass", "Trireme", "Local", FALSE
+      "UnitClass", "Helicopter", "Local", FALSE
+      "UnitClass", "Air", "Local", FALSE
+      "UnitClass", "Missile", "Local", FALSE
     }
 
 ; Airstrip HP regen (Every Air unit)
