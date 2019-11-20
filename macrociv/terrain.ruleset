@@ -25,6 +25,7 @@ flags =
     _("Oil"), _("Mine can be upgraded to Oil Well.")
     _("Sea"), _("Allows cities to build Harbors and coastal wonders.")
     _("NoPollution"), _("No Pollution nor Fallout appear here.")
+    _("Rough"), _("Roads cannot be built on this tile (but trails can).")
   }
 
 [parameters]
@@ -407,7 +408,7 @@ warmer_drier_result  = "Tundra"
 cooler_wetter_result = "no"
 cooler_drier_result  = "no"
 native_to            = "Land", "Small Land", "Merchant", "Air", "Missile", "Helicopter"
-flags                = "NoBarbs", "CanHaveRiver", "Oil", "Frozen"
+flags                = "NoBarbs", "CanHaveRiver", "Oil", "Frozen", "Rough"
 property_frozen      = 100
 color.r              = 232
 color.g              = 232
@@ -417,7 +418,8 @@ Glaciers are found only in the most northerly or southerly\
  reaches of the world. They are very cold, and hence difficult to\
  work with. Land, Small Land, and Merchant units on a glacier\
  tile lose 3 hitpoints each turn unless the tile also has a\
- river or fort.\
+ river or fort. Big Land units may not move in glaciers without\
+ trails.\
 ")
 
 [terrain_desert]
@@ -454,7 +456,7 @@ warmer_drier_result  = "no"
 cooler_wetter_result = "Tundra"
 cooler_drier_result  = "Tundra"
 native_to            = "Land", "Small Land", "Merchant", "Air", "Missile", "Helicopter"
-flags                = "CanHaveRiver", "Oil"
+flags                = "CanHaveRiver", "Oil", "Rough"
 property_dry         = 80
 property_tropical    = 70
 color.r              = 214
@@ -462,9 +464,10 @@ color.g              = 185
 color.b              = 106
 helptext             = _("\
 Deserts are regions of extreme dryness, making agriculture and\
- trade very difficult. Land, Small Land, and Merchant units on a desert\
+ trade very difficult. Land units on a desert\
  tile lose 3 hitpoints each turn unless the tile also has an\
- oasis, a river, irrigation, or a fort.\
+ oasis, a river, irrigation, or a fort. Big Land units may not\
+ move in deserts without trails.\
 "), _("\
 Rivers bring fertile soil to deserts; on a desert river not already\
  benefiting from an oasis, building irrigation will yield two extra food\
@@ -487,7 +490,7 @@ road_food_incr_pct   = 0
 road_shield_incr_pct = 0
 road_trade_incr_pct  = 0
 base_time            = 4
-road_time            = 0
+road_time            = 4
 irrigation_result    = "Plains"
 irrigation_food_incr = 0
 irrigation_time      = 10
@@ -505,7 +508,7 @@ warmer_drier_result  = "Desert"
 cooler_wetter_result = "Tundra"
 cooler_drier_result  = "Tundra"
 native_to            = "Land", "Small Land", "Merchant", "Air", "Missile", "Helicopter"
-flags                = "Starter", "CanHaveRiver"
+flags                = "Starter", "CanHaveRiver", "Rough"
 property_cold        = 80
 property_wet         = 70
 property_foliage     = 90
@@ -515,7 +518,7 @@ color.g              = 107
 color.b              = 19
 helptext             = _("\
 Forests are densely wooded, making agriculture somewhat\
- problematic.\
+ problematic. Big Land units may not move in forests without trails.\
 ")
 
 [terrain_grassland]
@@ -628,7 +631,7 @@ road_food_incr_pct   = 0
 road_shield_incr_pct = 0
 road_trade_incr_pct  = 0
 base_time            = 4
-road_time            = 0
+road_time            = 6
 irrigation_result    = "Swamp"
 irrigation_food_incr = 0
 irrigation_time      = 10
@@ -646,7 +649,7 @@ warmer_drier_result  = "Desert"
 cooler_wetter_result = "Tundra"
 cooler_drier_result  = "Forest"
 native_to            = "Land", "Small Land", "Merchant", "Air", "Missile", "Helicopter"
-flags                = "CanHaveRiver"
+flags                = "CanHaveRiver", "Rough"
 property_foliage     = 100
 property_tropical    = 100
 property_wet         = 100
@@ -655,7 +658,7 @@ color.g              = 156
 color.b              = 38
 helptext             = _("\
 Jungles are densely overgrown, making agriculture somewhat\
- problematic. Big Land units may not move into jungle.\
+ problematic. Big Land units may not move into jungles without trails.\
 ")
 
 [terrain_mountains]
@@ -674,7 +677,7 @@ road_food_incr_pct   = 0
 road_shield_incr_pct = 0
 road_trade_incr_pct  = 0
 base_time            = 3
-road_time            = 0
+road_time            = 8
 irrigation_result    = "no"
 irrigation_food_incr = 0
 irrigation_time      = 0
@@ -692,7 +695,7 @@ warmer_drier_result  = "no"
 cooler_wetter_result = "no"
 cooler_drier_result  = "no"
 native_to            = "Land", "Small Land", "Merchant", "Air", "Missile", "Helicopter"
-flags                = "CanHaveRiver"
+flags                = "CanHaveRiver", "Rough"
 property_mountainous = 30
 propetry_dry         = 20
 color.r              = 129
@@ -700,14 +703,14 @@ color.g              = 127
 color.b              = 118
 helptext             = _("\
 Mountains are regions of extreme altitude, making agriculture and\
- trade very difficult. Land, Small Land, and Merchant units on a mountain\
+ trade very difficult. Land units on a mountain\
  tile lose 2 hitpoints each turn unless the tile also has a\
  river or fort.\
 "), _("\
 Land units that move into mountains can see an extra space, but a\
  fast land unit ending its turn in mountains without a road will start\
  its next turn with one fewer movement point. Big Land units may not\
- move into mountains.\
+ move into mountains without trails.\
 ")
 
 [terrain_plains]
@@ -772,7 +775,7 @@ road_food_incr_pct   = 0
 road_shield_incr_pct = 0
 road_trade_incr_pct  = 0
 base_time            = 2
-road_time            = 0
+road_time            = 6
 irrigation_result    = "no"
 irrigation_food_incr = 1
 irrigation_time      = 5
@@ -790,7 +793,7 @@ warmer_drier_result  = "Plains"
 cooler_wetter_result = "Tundra"
 cooler_drier_result  = "Tundra"
 native_to            = "Land", "Small Land", "Merchant", "Air", "Missile", "Helicopter"
-flags                = "Starter", "CanHaveRiver"
+flags                = "Starter", "CanHaveRiver", "Rough"
 property_wet         = 90
 property_tropical    = 70
 property_temperate   = 10
@@ -800,7 +803,8 @@ color.g              = 85
 color.b              = 97
 helptext             = _("\
 Swamps suffer from an over-abundance of water, making agriculture\
- somewhat problematic. Big Land units may not move in swamps.\
+ somewhat problematic. Big Land units may not move in swamps without\
+ trails.\
 ")
 
 [terrain_tundra]
@@ -1638,6 +1642,42 @@ redundant on a tile which also has a Fort (which provides a better \
 version of these same effects).\
 ")
 
+[extra_trail]
+name           = _("Trail")
+category       = "Infra"
+causes         = "Road"
+rmcauses       = "Pillage"
+graphic        = "road.road"
+graphic_alt    = "-"
+activity_gfx   = "unit.road"
+act_gfx_alt    = "-"
+act_gfx_alt2   = "-"
+rmact_gfx      = "None"
+rmact_gfx_alt  = "-"
+reqs           =
+    { "type", "name", "range", "present", "quiet"
+      "Tech", "Bridge Building", "Player", TRUE, FALSE
+      "UnitFlag", "Settlers", "Local", TRUE, FALSE
+      "UnitClass", "Sea", "Local", FALSE, TRUE
+      "TerrainClass", "Land", "Local", TRUE, FALSE
+      "TerrainFlag", "Rough", "Local", TRUE, TRUE
+    }
+build_time     = 0
+removal_time   = 0
+native_to      = "Land", "Small Land", "Big Land", "Merchant"
+conflicts      = "Road", "Railroad", "Maglev"
+flags          = "NativeTile", "AutoOnCityCenter"
+helptext       = _("\
+Trails can be built on tiles where roads cannot be built. Like roads,\
+ trails make movement easier, but not as dramatically so. More\
+ importantly, trails allow wheeled Big Land units such as Chariots\
+ and Catapults to travel through terrain they are normally not native\
+ to (such as forests and mountains).\
+"), _("\
+City center tiles automatically get trails if the necessary technology\
+ is available and roads are not allowed by the tile.\
+")
+
 [extra_road]
 name           = _("Road")
 category       = "Infra"
@@ -1655,6 +1695,7 @@ reqs           =
       "UnitFlag", "Settlers", "Local", TRUE, FALSE
       "UnitClass", "Sea", "Local", FALSE, TRUE
       "TerrainClass", "Land", "Local", TRUE, FALSE
+      "TerrainFlag", "Rough", "Local", FALSE, TRUE
     }
 build_time     = 0
 removal_time   = 0
@@ -1662,9 +1703,7 @@ native_to      = "Land", "Small Land", "Big Land", "Merchant"
 hidden_by      = "Railroad", "Maglev"
 flags          = "NativeTile", "AutoOnCityCenter"
 helptext       = _("\
-Roads allow your land units to move more quickly, and allow wheeled\
- Big Land units such as Chariots and Catapults to travel through\
- otherwise difficult terrain (Mountains, Jungle, and Swamp).\
+Roads allow your land units to move more quickly.\
 "), _("\
 Building roads on river tiles requires knowledge of Bridge Building.\
  City center tiles automatically get roads if allowed by the tile.\
@@ -1689,6 +1728,7 @@ reqs           =
       "UnitFlag", "Settlers", "Local", TRUE, FALSE
       "UnitClass", "Sea", "Local", FALSE, TRUE
       "TerrainClass", "Land", "Local", TRUE, FALSE
+      "TerrainFlag", "Rough", "Local", FALSE, TRUE
     }
 build_time     = 3
 removal_time   = 0
@@ -1723,6 +1763,7 @@ reqs           =
       "UnitFlag", "Settlers", "Local", TRUE, FALSE
       "UnitClass", "Sea", "Local", FALSE, TRUE
       "TerrainClass", "Land", "Local", TRUE, FALSE
+      "TerrainFlag", "Rough", "Local", FALSE, TRUE
     }
 build_time     = 3
 removal_time   = 0
@@ -1901,6 +1942,18 @@ gui_type       = "Other"
 ;
 ; */ <-- avoid gettext warnings
 
+[road_trail]
+extra          = "Trail"
+move_cost      = 6
+food_incr      = 0
+shield_incr    = 0
+trade_incr     = 0
+food_bonus     = 0
+shield_bonus   = 0
+trade_bonus    = 0
+integrates     = "Road"
+flags          = "RequiresBridge", "UnrestrictedInfra"
+
 [road_road]
 extra          = "Road"
 move_cost      = 2
@@ -1911,6 +1964,7 @@ food_bonus     = 0
 shield_bonus   = 0
 trade_bonus    = 0
 compat_special = "Road"
+integrates     = "Trail"
 flags          = "RequiresBridge", "UnrestrictedInfra"
 
 [road_railroad]

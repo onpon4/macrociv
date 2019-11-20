@@ -184,10 +184,16 @@ sets this ruleset apart:
   warfare. (Incidentally, this is true in the real world, too.)
 
 - Desert and Glacier tiles, like Mountains, now cannot be traversed by
-  "big land" units without roads.
+  "big land" units by default.
 
-- It is now impossible to build roads on Mountains, Forest, Jungle, and
-  Swamp tiles.
+- It is now impossible to build roads on Mountains, Forest, Jungle,
+  Desert, Glacier, and Swamp tiles. You can, however, build a new
+  "Trail" extra on these tiles (and only these tiles), which allows Big
+  Land units to traverse them and reduces the amount of movement points
+  needed, but by a smaller amount than roads and rivers (specifically,
+  it reduces the number of movement points needed to 1 full movement
+  point, i.e. makes the tile equivalent in this regard to an unroaded
+  grassland or plains tile).
 
 - Hills are no longer considered to be "mountainous" by the map
   generator. Instead, they appear in cold regions.
@@ -198,6 +204,10 @@ sets this ruleset apart:
 
 - Roads no longer provide any resource bonuses. They exist solely to
   ease movement of units.
+
+- Forts and fortresses no longer have the "NativeTile" flag, i.e. will
+  not cause units native to them to automatically count the tile as
+  native. Instead, trails fill this role.
 
 - Desert tiles now require 3 movement points to traverse (like
   Mountains).
@@ -211,6 +221,10 @@ sets this ruleset apart:
   - The Cheating AI difficulty is exempt from this effect.
 
 - Cities can now be founded on mountains and glaciers.
+
+- Ruins now grant a defensive bonus (less effective compared to and
+  replaced by the defensive bonus of forts), and they also prevent
+  dangerous terrain from causing damage to units.
 
 - Global warming and nuclear winter tile changes have been modified to
   be more catastrophic and make a little more sense.
