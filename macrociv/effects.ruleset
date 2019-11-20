@@ -249,6 +249,7 @@ reqs    =
       "Extra", "Ruins", "Local", FALSE
       "Resource", "Oasis", "Local", FALSE
       "AI", "Cheating", "Player", FALSE
+      "NationGroup", "Barbarian", "Player", FALSE
     }
 
 [effect_dangerous_terrain_desert_1]
@@ -273,6 +274,7 @@ reqs    =
       "Extra", "Ruins", "Local", FALSE
       "Resource", "Oasis", "Local", FALSE
       "AI", "Cheating", "Player", FALSE
+      "NationGroup", "Barbarian", "Player", FALSE
     }
 
 [effect_dangerous_terrain_glacier]
@@ -295,6 +297,7 @@ reqs    =
       "Extra", "Fort", "Local", FALSE
       "Extra", "Ruins", "Local", FALSE
       "AI", "Cheating", "Player", FALSE
+      "NationGroup", "Barbarian", "Player", FALSE
     }
 
 [effect_dangerous_terrain_glacier_1]
@@ -317,6 +320,7 @@ reqs    =
       "Extra", "Fort", "Local", FALSE
       "Extra", "Ruins", "Local", FALSE
       "AI", "Cheating", "Player", FALSE
+      "NationGroup", "Barbarian", "Player", FALSE
     }
 
 [effect_dangerous_terrain_mountains]
@@ -339,6 +343,7 @@ reqs    =
       "Extra", "Fort", "Local", FALSE
       "Extra", "Ruins", "Local", FALSE
       "AI", "Cheating", "Player", FALSE
+      "NationGroup", "Barbarian", "Player", FALSE
     }
 
 [effect_dangerous_terrain_mountains_1]
@@ -361,6 +366,7 @@ reqs    =
       "Extra", "Fort", "Local", FALSE
       "Extra", "Ruins", "Local", FALSE
       "AI", "Cheating", "Player", FALSE
+      "NationGroup", "Barbarian", "Player", FALSE
     }
 
 ; FIXME: This effect is currently disabled for AI players because the AI
@@ -377,6 +383,7 @@ reqs    =
       "AI", "Normal", "Player", FALSE
       "AI", "Hard", "Player", FALSE
       "AI", "Cheating", "Player", FALSE
+      "NationGroup", "Barbarian", "Player", FALSE
     }
 
 [effect_lost_at_sea_1]
@@ -391,6 +398,7 @@ reqs    =
       "AI", "Normal", "Player", FALSE
       "AI", "Hard", "Player", FALSE
       "AI", "Cheating", "Player", FALSE
+      "NationGroup", "Barbarian", "Player", FALSE
     }
 
 ; Vision benefit from fortress watchtowers

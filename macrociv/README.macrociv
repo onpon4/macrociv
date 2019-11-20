@@ -220,7 +220,8 @@ sets this ruleset apart:
   protective barriers in real life. The presence of a city, fort, river,
   irrigation, or oasis prevents this effect.
 
-  - The Cheating AI difficulty is exempt from this effect.
+  - The Cheating AI difficulty is exempt from this effect. Barbarians
+    are also exempt.
 
 - Cities can now be founded on mountains and glaciers.
 
