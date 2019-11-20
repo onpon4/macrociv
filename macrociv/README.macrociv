@@ -129,15 +129,17 @@ sets this ruleset apart:
 - Warriors now have the ability of marines to attack from ships, and are
   the first such unit (instead of Legions).
 
-- Pre-modern ships (that is to say Triremes, Caravels, Galleons,
-  Frigates, and Ironclads) now lose 2 hitpoints every turn they end on a
-  Deep Ocean tile. This is designed to simulate the risk of running out
-  of food faced by real-world sail ships. Galleons and Frigates have
-  more hitpoints than Caravels, so they are effectively able to travel a
-  much longer distance through deep oceans (simulating advances in
-  sailing technique over time). Starting with the Destroyer and
-  Transport, this effect is removed. (Ironclads maintain this effect
-  because they exist in the same technological era as sail ships.)
+- Triremes can no longer travel on rivers.
+
+- Pre-modern ships (that is to say Caravels, Galleons, Frigates, and
+  Ironclads) now lose 2 hitpoints every turn they end on a Deep Ocean
+  tile. This is designed to simulate the risk of running out of food
+  faced by real-world sail ships. Galleons and Frigates have more
+  hitpoints than Caravels, so they are effectively able to travel a much
+  longer distance through deep oceans (simulating advances in sailing
+  technique over time). Starting with the Destroyer and Transport, this
+  effect is removed. (Ironclads maintain this effect because they exist
+  in the same technological era as sail ships.)
 
   - The AI is incapable of dealing with this effect, so it is disabled
     for them. See the UNMET GOALS section below for a detailed
