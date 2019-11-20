@@ -819,7 +819,7 @@ set =
       "restrictinfra", "DISABLED"
       "killstack", "DISABLED"
       "unreachableprotects", "DISABLED"
-      "barbarians", "HORDES"
+      "barbarians", "FREQUENT"
       "onsetbarbs", 0
       "occupychance", 100
       "razechance", 10

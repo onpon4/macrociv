@@ -811,8 +811,7 @@ uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
 flags         = "Marines", "Capturer"
-roles         = "DefendGood", "DefendGoodStartUnit", "FirstBuild",
-                "BarbarianBuildTech", "BarbarianSeaTech"
+roles         = "DefendGood", "DefendGoodStartUnit", "FirstBuild"
 helptext      = _("\
 Riflemen are World War-era infantry, very good\
  at defending your cities.\
@@ -1038,7 +1037,7 @@ helptext      = _("\
 The Mechanized Infantry has the strongest inherent defensive strength \
 of any land unit, and is very fast on roads and easy terrain, but it is \
 hindered rather than helped by rough terrain (it cannot move into \
-mountains, swamps, or jungles), and it is only available near the end \
+rough terrain without trails), and it is only available near the end \
 of the technology tree.\
 ")
 
@@ -1106,8 +1105,8 @@ helptext      = _("\
 Chariots are horse-pulled war wagons. They have a stronger attack than \
 Horsemen, but their speed comes at a cost: they are more expensive \
 to build, they cannot take advantage of terrain to defend themselves, \
-they cannot move in rough terrain (mountains, swamps, and jungles) \
-without roads, and they cannot be transported by sea using early ships \
+they cannot move in rough terrain \
+without trails, and they cannot be transported by sea using early ships \
 (Triremes and Caravels).\
 ")
 
@@ -1264,7 +1263,7 @@ uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
 flags         = "Capturer"
-roles         = "AttackFastStartUnit", "BarbarianBuildTech", "Hunter"
+roles         = "AttackFastStartUnit", "Hunter"
 helptext      = _("\
 Cavalry are mounted and highly trained soldiers.\
 ")
@@ -1300,9 +1299,8 @@ roles         = "DefendOk", "DefendOkStartUnit", "AttackFastStartUnit", "Hunter"
 helptext      = _("\
 Tanks are motorized war wagons that are faster, stronger, and can take \
 more damage than any mounted unit. However, they are less adaptable to \
-very rough terrain (they cannot move into mountains, swamps, or jungles \
-without roads), and unable to use less rough terrain to improve their \
-defense. They also cannot capture enemy units. These limitations cause \
+rough terrain (they cannot move into rough terrain without trails). They \
+also cannot capture enemy units. These limitations cause \
 old-school cavalry to remain relevant and potentially useful, but in most \
 cases, tanks are the superior fast unit.\
 ")
@@ -1340,9 +1338,8 @@ Catapults are large rock-throwing machines of war.\
  defenders and will need an escort to be effective.\
 "), _("\
 While powerful, Catapults (and their successors) are bulky and awkward; \
-they require roads to move in rough terrain (mountains, swamps, and \
-jungles), are difficult to defend, and are too big for early ships \
-(Triremes and Caravels).\
+they require trails to move in rough terrain, are difficult to defend, \
+and are too big for early ships (Triremes and Caravels).\
 ")
 
 [unit_cannon]
