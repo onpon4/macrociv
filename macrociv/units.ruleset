@@ -28,8 +28,7 @@ flags =
   { "name", "helptxt"
     _("Airbase")
     _("Transform")
-    _("AirAttacker"), _("Very bad at attacking AEGIS.")
-    _("Submarine"), _("Attack value halved when attacking Destroyer.")
+    _("BadAEGIS"), _("Very bad at attacking AEGIS.")
     _("Unbribable")
     _("TradeRoute"), _("Can establish trade routes (must travel to target city).")
     _("HelpWonder")
@@ -767,7 +766,7 @@ pop_cost      = 0
 attack        = 3
 defense       = 3
 hitpoints     = 20
-firepower     = 1
+firepower     = 2
 move_rate     = 1
 vision_radius_sq = 2
 transport_cap = 0
@@ -801,7 +800,7 @@ pop_cost      = 0
 attack        = 5
 defense       = 4
 hitpoints     = 40
-firepower     = 1
+firepower     = 3
 move_rate     = 1
 vision_radius_sq = 2
 transport_cap = 0
@@ -833,7 +832,7 @@ pop_cost      = 0
 attack        = 7
 defense       = 4
 hitpoints     = 40
-firepower     = 1
+firepower     = 3
 move_rate     = 1
 vision_radius_sq = 2
 transport_cap = 0
@@ -867,7 +866,7 @@ pop_cost      = 0
 attack        = 4
 defense       = 5
 hitpoints     = 40
-firepower     = 1
+firepower     = 3
 move_rate     = 1
 vision_radius_sq = 6
 transport_cap = 0
@@ -911,7 +910,7 @@ pop_cost      = 1
 attack        = 5
 defense       = 5
 hitpoints     = 40
-firepower     = 1
+firepower     = 3
 move_rate     = 1
 vision_radius_sq = 2
 transport_cap = 0
@@ -948,7 +947,7 @@ pop_cost      = 0
 attack        = 8
 defense       = 5
 hitpoints     = 40
-firepower     = 1
+firepower     = 3
 move_rate     = 1
 vision_radius_sq = 2
 transport_cap = 0
@@ -981,7 +980,7 @@ pop_cost      = 0
 attack        = 6
 defense       = 4
 hitpoints     = 40
-firepower     = 1
+firepower     = 3
 move_rate     = 1
 vision_radius_sq = 2
 transport_cap = 0
@@ -1022,7 +1021,7 @@ pop_cost      = 0
 attack        = 6
 defense       = 6
 hitpoints     = 50
-firepower     = 1
+firepower     = 3
 move_rate     = 3
 vision_radius_sq = 2
 transport_cap = 0
@@ -1222,7 +1221,7 @@ pop_cost      = 0
 attack        = 5
 defense       = 2
 hitpoints     = 20
-firepower     = 1
+firepower     = 2
 move_rate     = 2
 vision_radius_sq = 2
 transport_cap = 0
@@ -1253,7 +1252,7 @@ pop_cost      = 0
 attack        = 8
 defense       = 3
 hitpoints     = 40
-firepower     = 1
+firepower     = 3
 move_rate     = 2
 vision_radius_sq = 2
 transport_cap = 0
@@ -1285,7 +1284,7 @@ pop_cost      = 0
 attack        = 10
 defense       = 5
 hitpoints     = 50
-firepower     = 1
+firepower     = 3
 move_rate     = 3
 vision_radius_sq = 2
 transport_cap = 0
@@ -1358,7 +1357,7 @@ pop_cost      = 0
 attack        = 8
 defense       = 1
 hitpoints     = 20
-firepower     = 1
+firepower     = 2
 move_rate     = 1
 vision_radius_sq = 2
 transport_cap = 0
@@ -1392,7 +1391,7 @@ pop_cost      = 0
 attack        = 10
 defense       = 2
 hitpoints     = 30
-firepower     = 1
+firepower     = 3
 move_rate     = 1
 vision_radius_sq = 2
 transport_cap = 0
@@ -1425,7 +1424,7 @@ pop_cost      = 0
 attack        = 12
 defense       = 2
 hitpoints     = 50
-firepower     = 1
+firepower     = 3
 move_rate     = 1
 vision_radius_sq = 2
 transport_cap = 0
@@ -1457,7 +1456,7 @@ pop_cost      = 0
 attack        = 6
 defense       = 4
 hitpoints     = 40
-firepower     = 1
+firepower     = 3
 move_rate     = 10
 vision_radius_sq = 8
 transport_cap = 0
@@ -1467,7 +1466,7 @@ uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
 targets       = "Air", "Helicopter"
-flags         = "AirAttacker", "HasNoZOC"
+flags         = "BadAEGIS", "HasNoZOC"
 roles         = "Hunter"
 helptext      = _("\
 Fighters are your first airborne units. They can\
@@ -1495,7 +1494,7 @@ pop_cost      = 0
 attack        = 12
 defense       = 2
 hitpoints     = 50
-firepower     = 1
+firepower     = 3
 move_rate     = 8
 vision_radius_sq = 8
 transport_cap = 0
@@ -1504,7 +1503,7 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
-flags         = "FieldUnit", "OneAttack", "AirAttacker", "Bombarder", "HasNoZOC"
+flags         = "FieldUnit", "OneAttack", "BadAEGIS", "Bombarder", "HasNoZOC"
 roles         = "Hunter"
 helptext      = _("\
 Bombers are specialized airborne units that may\
@@ -1519,7 +1518,7 @@ _("\
 As with other aircraft, Bombers lose 10% of their hitpoints for every \
 turn not spent in a city, airstrip, or airbase, or on a Carrier.\
 ")
-bombard_rate = 6
+bombard_rate = 4
 
 [unit_helicopter]
 name          = _("Helicopter")
@@ -1537,7 +1536,7 @@ pop_cost      = 0
 attack        = 5
 defense       = 3
 hitpoints     = 40
-firepower     = 1
+firepower     = 3
 move_rate     = 6
 vision_radius_sq = 8
 transport_cap = 1
@@ -1547,7 +1546,7 @@ uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
 cargo         = "Land"
-flags         = "OneAttack", "AirAttacker", "HasNoZOC"
+flags         = "OneAttack", "BadAEGIS", "HasNoZOC"
 roles         = "DefendOk"
 helptext      = _("\
 Helicopters bear the distinction among air units of being able to occupy \
@@ -1578,7 +1577,7 @@ pop_cost      = 0
 attack        = 9
 defense       = 8
 hitpoints     = 40
-firepower     = 1
+firepower     = 3
 move_rate     = 14
 vision_radius_sq = 8
 transport_cap = 0
@@ -1588,7 +1587,7 @@ uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
 targets       = "Air", "Helicopter"
-flags         = "Partial_Invis", "AirAttacker", "HasNoZOC"
+flags         = "Partial_Invis", "BadAEGIS", "HasNoZOC"
 roles         = "DefendGood", "DefendGoodStartUnit"
 helptext      = _("\
 An improved Fighter, with improved attack and a higher movement\
@@ -1611,7 +1610,7 @@ pop_cost      = 0
 attack        = 18
 defense       = 3
 hitpoints     = 50
-firepower     = 1
+firepower     = 3
 move_rate     = 12
 vision_radius_sq = 8
 transport_cap = 0
@@ -1620,13 +1619,13 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
-flags         = "Partial_Invis", "FieldUnit", "OneAttack", "AirAttacker", "Bombarder", "HasNoZOC"
+flags         = "Partial_Invis", "FieldUnit", "OneAttack", "BadAEGIS", "Bombarder", "HasNoZOC"
 roles         = "DefendOk", "DefendOkStartUnit"
 helptext      = _("\
 An improved Bomber, with improved attack and a higher movement\
  radius.\
 ")
-bombard_rate = 8
+bombard_rate = 4
 
 [unit_trireme]
 name          = _("Trireme")
@@ -1751,7 +1750,7 @@ pop_cost      = 0
 attack        = 3
 defense       = 2
 hitpoints     = 20
-firepower     = 1
+firepower     = 2
 move_rate     = 4
 vision_radius_sq = 2
 transport_cap = 0
@@ -1783,7 +1782,7 @@ pop_cost      = 0
 attack        = 4
 defense       = 3
 hitpoints     = 30
-firepower     = 1
+firepower     = 2
 move_rate     = 4
 vision_radius_sq = 2
 transport_cap = 0
@@ -1812,10 +1811,10 @@ sound_fight   = "f_destroyer"
 sound_fight_alt = "f_generic"
 build_cost    = 60
 pop_cost      = 0
-attack        = 4
+attack        = 6
 defense       = 4
 hitpoints     = 50
-firepower     = 1
+firepower     = 3
 move_rate     = 6
 vision_radius_sq = 8
 transport_cap = 0
@@ -1824,12 +1823,8 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
-bonuses       =
-   { "flag", "type", "value"
-     "Submarine", "DefenseMultiplier", 1
-   }
 flags         = "BadCityDefender"
-roles         = "Hunter"
+roles         = "Hunter", "AttackFastStartUnit"
 helptext      = _("\
 The first modern warship, a light, fast ship which outclasses all\
  pre-modern warships and remains competitive as the modern era of\
@@ -1837,10 +1832,8 @@ The first modern warship, a light, fast ship which outclasses all\
  and all later warships, can stay in Deep Ocean tiles indefinitely\
  without losing hitpoints.\
 "), _("\ 
-Anti-submarine weapons double this ship's defense against Submarines.\
-"), _("\
-TIP:  A very fast unit, which is very useful for hunting down enemy\
- Transports and Submarines.\
+Destroyers are lacking in defense, but faster than any other warship\
+ and with a good offensive value.\
 ")
 
 [unit_cruiser]
@@ -1856,10 +1849,10 @@ sound_fight   = "f_cruiser"
 sound_fight_alt = "f_generic"
 build_cost    = 80
 pop_cost      = 0
-attack        = 6
-defense       = 6
+attack        = 4
+defense       = 8
 hitpoints     = 50
-firepower     = 1
+firepower     = 3
 move_rate     = 5
 vision_radius_sq = 8
 transport_cap = 0
@@ -1869,9 +1862,12 @@ uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
 flags         = "BadCityDefender"
-roles         = "DefendOk", "DefendOkStartUnit"
+roles         = "DefendGood", "DefendGoodStartUnit"
 helptext      = _("\
-The Cruiser is a strong offensive boat unit.\
+Cruisers are large warships with a high defensive value, but a weak\
+ offensive value compared to the lighter and faster Destroyers.\
+ Cruisers are mainly useful for the defense of Destroyers and\
+ Submarines which would otherwise be vulnerable to attack.
 ")
 
 [unit_aegis_cruiser]
@@ -1887,10 +1883,10 @@ sound_fight   = "f_aegis_cruiser"
 sound_fight_alt = "f_generic"
 build_cost    = 100
 pop_cost      = 0
-attack        = 8
+attack        = 4
 defense       = 8
 hitpoints     = 50
-firepower     = 1
+firepower     = 3
 move_rate     = 5
 vision_radius_sq = 8
 transport_cap = 0
@@ -1901,13 +1897,15 @@ uk_food       = 1
 uk_gold       = 1
 bonuses       =
    { "flag", "type", "value"
-     "AirAttacker", "DefenseMultiplier", 4
+     "BadAEGIS", "DefenseMultiplier", 4
    }
 flags         = "BadCityDefender"
 roles         = "DefendGood", "DefendGoodStartUnit"
 helptext      = _("\
-The AEGIS Cruiser is equipped with an advanced\
- defensive missile system.\
+AEGIS Cruisers are upgraded Cruisers equipped with an advanced\
+ defensive missile system. This missile system is very effective at\
+ protecting them both from air strikes (but not Cruise Missiles) and\
+ from Battleships.\
 ")
 
 [unit_battleship]
@@ -1924,9 +1922,9 @@ sound_fight_alt = "f_generic"
 build_cost    = 160
 pop_cost      = 0
 attack        = 12
-defense       = 12
-hitpoints     = 50
-firepower     = 1
+defense       = 7
+hitpoints     = 70
+firepower     = 3
 move_rate     = 4
 vision_radius_sq = 8
 transport_cap = 0
@@ -1935,11 +1933,15 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
-flags         = "BadCityDefender"
+flags         = "BadCityDefender", "BadAEGIS"
 roles         = "DefendOk", "DefendOkStartUnit"
 helptext      = _("\
-The Battleship is the supreme pre-flight naval unit with\
- excellent offensive and defensive values.\
+Battleships are the largest and most powerful warships, with\
+ offensive and defensive values unmatched by any other.\
+ However, they are susceptible to being caught off-guard by\
+ missiles and are ineffective against AEGIS units. These\
+ weaknesses lead to Battleships becoming obsolete as Aircraft\
+ Carriers are introduced.\
 ")
 
 [unit_submarine]
@@ -1956,9 +1958,9 @@ sound_fight_alt = "f_generic"
 build_cost    = 70
 pop_cost      = 0
 attack        = 12
-defense       = 5
+defense       = 3
 hitpoints     = 40
-firepower     = 1
+firepower     = 3
 move_rate     = 5
 vision_radius_sq = 8
 transport_cap = 8
@@ -1968,7 +1970,7 @@ uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
 cargo         = "Missile"
-flags         = "Partial_Invis", "BadCityDefender", "Only_Native_Attack", "Submarine"
+flags         = "Partial_Invis", "BadCityDefender", "Only_Native_Attack"
 roles         = "Hunter"
 helptext      = _("\
 Traveling under the surface of the ocean, Submarines have\
@@ -1990,9 +1992,9 @@ sound_fight_alt = "f_generic"
 build_cost    = 80
 pop_cost      = 0
 attack        = 0
-defense       = 12
-hitpoints     = 70
-firepower     = 1
+defense       = 3
+hitpoints     = 40
+firepower     = 2
 move_rate     = 5
 vision_radius_sq = 8
 transport_cap = 8
@@ -2011,8 +2013,8 @@ It can transport aircraft and military land units (not wheeled),\
  although land units cannot always be transferred to and from Helicopters\
  while onboard (see Helicopter help).\
 "), _("\
-TIP:  Guard Carriers with a handful of ships, as losing a fully-equipped\
- Carrier can be painful expensive.\
+TIP:  Guard Carriers with a handful of ships and at least one AEGIS\
+ Cruiser, as losing a fully-equipped Carrier can be painful and expensive.\
 ")
 
 [unit_transport]
@@ -2031,7 +2033,7 @@ pop_cost      = 0
 attack        = 0
 defense       = 3
 hitpoints     = 40
-firepower     = 1
+firepower     = 2
 move_rate     = 5
 vision_radius_sq = 8
 transport_cap = 8
@@ -2078,7 +2080,7 @@ pop_cost      = 0
 attack        = 18
 defense       = 0
 hitpoints     = 10
-firepower     = 1
+firepower     = 3
 move_rate     = 16
 vision_radius_sq = 2
 transport_cap = 0
@@ -2088,7 +2090,7 @@ uk_shield     = 1
 uk_food       = 0
 uk_gold       = 1
 targets       = "Air", "Helicopter"
-flags         = "OneAttack", "AirAttacker", "CityBuster", "HasNoZOC"
+flags         = "OneAttack", "CityBuster", "HasNoZOC"
 roles         = ""
 helptext      = _("\
 The Cruise Missile is a long-distance missile\
@@ -2590,7 +2592,7 @@ build_cost    = 140
 pop_cost      = 0
 attack        = 0
 defense       = 1
-hitpoints     = 20
+hitpoints     = 40
 firepower     = 1
 move_rate     = 16
 vision_radius_sq = 26

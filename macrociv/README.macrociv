@@ -145,18 +145,52 @@ sets this ruleset apart:
     for them. See the UNMET GOALS section below for a detailed
     explanation.
 
-- The Battleship's hitpoints are no longer greater than smaller warships
-  of its era (due to increases in hitpoints for them), making them less
-  domineering in naval warfare, while the Carrier has been reduced in
-  cost and had its defense increased to 12 (the same as the attack and
-  defense values of the Battleship), making the battleship pretty
-  clearly an inferior choice compared to carriers. Additionally,
-  battleships now become obsolete by carriers. This is meant to reflect
-  the reality of battleships, which is that while they had advantages
-  for a short period of time, their disadvantages quickly outweighed
-  their advantages and they became obsolete before long as a result.
-  This is also designed to make carriers more competitive as naval
-  units.
+- Modern era warships have been completely rebalanced. The "Rock, Paper,
+  Scissors" mechanic of Destroyers, Cruisers, and Submarines has been
+  removed; I found that it didn't really do anything useful except cause
+  the defender to have an advantage by simply piling all of these units
+  on one tile. Instead:
+
+  - Destroyers have been designated as fast attack ships, with 6 attack
+    and 4 defense.
+
+  - Cruisers and AEGIS Cruisers have been designated as defending ships,
+    with 4 attack and 8 defense. AEGIS Cruisers have had their
+    resistance to missiles removed, but have gained resistance to
+    Battleships.
+
+  - Submarines have been designated as sneak attack ships, with 12
+    attack, 3 defense, and 20% less hitpoints than other warships. Other
+    than the reduced defense (which makes it easier for Destroyers to
+    defeat them), they are unchanged. They are effective at attacking
+    all other kinds of warships and resist being seen, but at the same
+    time, all other warships are effective at destroying submarines if
+    they are found.
+
+  - Battleships have been designated as strong attack ships, with 12
+    attack, 7 defense, and 40% more hitpoints than other warships.
+    However, they have the same weakness to AEGIS Cruisers as air units,
+    and their reduced defense renders them vulnerable to Submarines as
+    well (which, when attacking, have about an equal chance of either
+    winning or losing at base level). They become obsolete by Carriers
+    since they (carrying up to 8 bombers, which have the same attack
+    strength and can easily destroy a battleship singlehandedly) are
+    much more effective.
+
+  - Carriers replace Battleships as strong attack ships; they fulfill
+    this role by carrying Bombers, and they also double as carriers of
+    Fighters and Helicopters, which provide further support against land
+    and air units (and Fighters are also useful for picking off almost
+    defeated enemy warships). Carriers' defense and hitpoints have been
+    reduced to the level of Transports not in an effort to nerf it, but
+    to make sure that the Carrier doesn't have a tendency to defend
+    unless it absolutely has to. Guarding a Carrier with at least one
+    AEGIS Cruiser and a handful of Destroyers is highly recommended.
+
+  - As before, missiles are carried by Submarines. They are effective
+    against all warships (now even including AEGIS Cruisers), but
+    usually a few missiles are needed. and missiles must be replenished
+    once a submarine runs out.
 
 - Hitpoints of all air units have been increased to line up with the
   increased hitpoints of modern warships, and bombers have regained the
@@ -176,6 +210,12 @@ sets this ruleset apart:
   is meant to line up the hitpoints of ground units with those of air
   and sea units. It also makes modern land units much more powerful than
   old-school musketeers, which makes more sense anyway.
+
+- Variable firepower has been reintroduced. Firepower now goes up on a
+  scale: melee weapons have a firepower of 1, early firearms have a
+  firepower of 2, and modern weapons have a firepower of 3. This is
+  meant to create a more stark difference between the power of the
+  different technological eras.
 
 - Armor has been renamed to Tank and no longer renders Cavalry obsolete.
   Cavalry is still potentially useful, especially because roads can no
