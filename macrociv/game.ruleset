@@ -828,6 +828,6 @@ set =
       "revolentype", "RANDOM"
       "revolen", 7
       "civilwarsize", 2
-      "endturn", 400
+      "endturn", 500
       "victories", "ALLIED"
     }
