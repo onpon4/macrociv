@@ -10,7 +10,7 @@
 ; than minor changes.
 
 [datafile]
-description="Civ2Civ3 game rules for Freeciv"
+description="Macrociv game rules for Freeciv"
 options="+Freeciv-2.6-ruleset"
 
 ; This section contains meta information for freeciv-ruledit to recreate the ruleset
@@ -786,7 +786,7 @@ colorlist =
 ; etc...
 
 [settings]
-; freeciv game settings for civ2civ3 ruleset
+; freeciv game settings for Macrociv ruleset
 ;
 set =
     { "name", "value"
