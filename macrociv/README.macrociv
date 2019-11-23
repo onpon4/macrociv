@@ -213,9 +213,7 @@ sets this ruleset apart:
 
 - Variable firepower has been reintroduced. Firepower now goes up on a
   scale: melee weapons have a firepower of 1, early firearms have a
-  firepower of 2, and modern weapons have a firepower of 3. This is
-  meant to create a more stark difference between the power of the
-  different technological eras.
+  firepower of 2, and modern weapons have a firepower of 4.
 
 - Armor has been renamed to Tank and no longer renders Cavalry obsolete.
   Cavalry is still potentially useful, especially because roads can no
