@@ -339,3 +339,18 @@ function place_map_labels()
 end
 
 signal.connect("map_generated", "place_map_labels")
+
+-- Place fuel points
+function place_fuel_extra(turn, year)
+  for tile in whole_map_iterate() do
+    local tname = tile.terrain:rule_name()
+    if tile:has_extra("River") or tile:has_extra("Oasis") or
+        (tname ~= "Desert" and tname ~= "Glacier" and tname ~= "Mountains" and tname ~= "Deep Ocean") then
+      edit.create_extra(tile, "Refuel Point")
+    end
+  end
+
+  return false
+end
+
+signal.connect("turn_started", "place_fuel_extra")

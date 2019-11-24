@@ -248,8 +248,6 @@ reqs    =
       "Extra", "Fort", "Local", FALSE
       "Extra", "Ruins", "Local", FALSE
       "Resource", "Oasis", "Local", FALSE
-      "AI", "Cheating", "Player", FALSE
-      "NationGroup", "Barbarian", "Player", FALSE
     }
 
 [effect_dangerous_terrain_desert_1]
@@ -273,8 +271,6 @@ reqs    =
       "Extra", "Fort", "Local", FALSE
       "Extra", "Ruins", "Local", FALSE
       "Resource", "Oasis", "Local", FALSE
-      "AI", "Cheating", "Player", FALSE
-      "NationGroup", "Barbarian", "Player", FALSE
     }
 
 [effect_dangerous_terrain_glacier]
@@ -296,8 +292,6 @@ reqs    =
       "Extra", "River", "Local", FALSE
       "Extra", "Fort", "Local", FALSE
       "Extra", "Ruins", "Local", FALSE
-      "AI", "Cheating", "Player", FALSE
-      "NationGroup", "Barbarian", "Player", FALSE
     }
 
 [effect_dangerous_terrain_glacier_1]
@@ -319,8 +313,6 @@ reqs    =
       "Extra", "River", "Local", FALSE
       "Extra", "Fort", "Local", FALSE
       "Extra", "Ruins", "Local", FALSE
-      "AI", "Cheating", "Player", FALSE
-      "NationGroup", "Barbarian", "Player", FALSE
     }
 
 [effect_dangerous_terrain_mountains]
@@ -342,8 +334,6 @@ reqs    =
       "Extra", "River", "Local", FALSE
       "Extra", "Fort", "Local", FALSE
       "Extra", "Ruins", "Local", FALSE
-      "AI", "Cheating", "Player", FALSE
-      "NationGroup", "Barbarian", "Player", FALSE
     }
 
 [effect_dangerous_terrain_mountains_1]
@@ -365,41 +355,39 @@ reqs    =
       "Extra", "River", "Local", FALSE
       "Extra", "Fort", "Local", FALSE
       "Extra", "Ruins", "Local", FALSE
-      "AI", "Cheating", "Player", FALSE
-      "NationGroup", "Barbarian", "Player", FALSE
     }
 
 ; FIXME: This effect is currently disabled for AI players because the AI
 ; utterly fails to handle it properly.
-[effect_lost_at_sea]
-type    = "Unit_Recover"
-value   = -2
-reqs    =
-    { "type", "name", "range", "present"
-      "UnitFlag", "BadNavigator", "Local", TRUE
-      "Terrain", "Deep Ocean", "Local", TRUE
-      "AI", "Novice", "Player", FALSE
-      "AI", "Easy", "Player", FALSE
-      "AI", "Normal", "Player", FALSE
-      "AI", "Hard", "Player", FALSE
-      "AI", "Cheating", "Player", FALSE
-      "NationGroup", "Barbarian", "Player", FALSE
-    }
+;[effect_lost_at_sea]
+;type    = "Unit_Recover"
+;value   = -2
+;reqs    =
+;    { "type", "name", "range", "present"
+;      "UnitFlag", "BadNavigator", "Local", TRUE
+;      "Terrain", "Deep Ocean", "Local", TRUE
+;      "AI", "Novice", "Player", FALSE
+;      "AI", "Easy", "Player", FALSE
+;      "AI", "Normal", "Player", FALSE
+;      "AI", "Hard", "Player", FALSE
+;      "AI", "Cheating", "Player", FALSE
+;      "NationGroup", "Barbarian", "Player", FALSE
+;    }
 
-[effect_lost_at_sea_1]
-type    = "HP_Regen"
-value   = -100
-reqs    =
-    { "type", "name", "range", "present"
-      "UnitFlag", "BadNavigator", "Local", TRUE
-      "Terrain", "Deep Ocean", "Local", TRUE
-      "AI", "Novice", "Player", FALSE
-      "AI", "Easy", "Player", FALSE
-      "AI", "Normal", "Player", FALSE
-      "AI", "Hard", "Player", FALSE
-      "AI", "Cheating", "Player", FALSE
-      "NationGroup", "Barbarian", "Player", FALSE
-    }
+;[effect_lost_at_sea_1]
+;type    = "HP_Regen"
+;value   = -100
+;reqs    =
+;    { "type", "name", "range", "present"
+;      "UnitFlag", "BadNavigator", "Local", TRUE
+;      "Terrain", "Deep Ocean", "Local", TRUE
+;      "AI", "Novice", "Player", FALSE
+;      "AI", "Easy", "Player", FALSE
+;      "AI", "Normal", "Player", FALSE
+;      "AI", "Hard", "Player", FALSE
+;      "AI", "Cheating", "Player", FALSE
+;      "NationGroup", "Barbarian", "Player", FALSE
+;    }
 
 ; Vision benefit from fortress watchtowers
 [effect_fortress_vision]
