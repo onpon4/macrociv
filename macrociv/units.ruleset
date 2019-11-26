@@ -28,6 +28,7 @@ flags =
   { "name", "helptxt"
     _("Airbase")
     _("Transform")
+    _("Muskets"), _("Less effective when fighting against Archers.")
     _("BadAEGIS"), _("Very bad at attacking AEGIS.")
     _("Unbribable")
     _("TradeRoute"), _("Can establish trade routes (must travel to target city).")
@@ -626,7 +627,7 @@ This unit may be built from the start of the game.  It is the\
 name          = _("Phalanx")
 class         = "Land"
 tech_req      = "Bronze Working"
-obsolete_by   = "Pikemen"
+obsolete_by   = "Legion"
 graphic       = "u.phalanx"
 graphic_alt   = "-"
 sound_move    = "m_phalanx"
@@ -678,11 +679,28 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
+bonuses       =
+   { "flag", "type", "value"
+     "Muskets", "DefenseMultiplier", 3
+     "Muskets", "DefenseDivider", 2
+     "Muskets", "FirePower1", 1
+   }
 flags         = "Capturer"
 roles         = "DefendOk", "DefendOkStartUnit", "Hut"
 helptext      = _("\
 Archers fight with bows and arrows and have a good offensive\
  value.\
+"),
+; /* xgettext:no-c-format */
+_("\
+Archers gain triple defense when attacked by musket-wielding units\
+ (Musketeers and Dragoons), and these units also suffer from a 50%\
+ defense penalty when attacked by Archers. Additionally, in any\
+ battle between Archers and musket-wielding units, the\
+ musket-wielding unit's firepower is decreased to 1. The sum total\
+ of these effects is that Archers are roughly equal in strength to\
+ Musketeers when fighting against musket-wielding units; the\
+ attacker has the advantage in all cases.\
 ")
 
 [unit_legion]
@@ -711,7 +729,7 @@ uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
 flags         = "Marines", "Capturer"
-roles         = "DefendOk", "DefendOkStartUnit", "BarbarianBuildTech",
+roles         = "DefendGood", "DefendGoodStartUnit", "BarbarianBuildTech",
                 "BarbarianSeaTech"
 helptext      = _("\
 Legions are heavily armed and well disciplined infantry\
@@ -775,7 +793,7 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
-flags         = "Marines", "Capturer"
+flags         = "Marines", "Capturer", "Muskets"
 roles         = "DefendGood", "DefendGoodStartUnit", "FirstBuild", "HutTech",
                 "BarbarianTech", "BarbarianBuildTech", "BarbarianSeaTech"
 helptext      = _("\
@@ -1230,7 +1248,7 @@ uk_happy      = 1
 uk_shield     = 1
 uk_food       = 1
 uk_gold       = 1
-flags         = "Capturer"
+flags         = "Capturer", "Muskets"
 roles         = "AttackFastStartUnit", "BarbarianBuildTech", "Hunter"
 helptext      = _("\
 Dragoons are mounted warriors carrying early firearms.\
