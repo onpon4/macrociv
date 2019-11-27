@@ -134,6 +134,8 @@ sets this ruleset apart:
 
 - Triremes can no longer travel on rivers.
 
+- Caravels and Galleons have had their defense reduced to 1.
+
 - Pre-modern ships (that is to say Caravels, Galleons, Frigates, and
   Ironclads) now lose 2 hitpoints every turn they end on a Deep Ocean
   tile. This is designed to simulate the risk of running out of food
