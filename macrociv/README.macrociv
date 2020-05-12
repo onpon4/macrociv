@@ -392,7 +392,7 @@ Civ2Civ3:
 
 - City minimum distance is 2, but migration is enabled (distance 0,
   which in reality means a distance of 2 and means that cities need to
-  be a 3 tiles apart to ensure no migration). Citizens consider
+  be at least 3 tiles apart to ensure no migration). Citizens consider
   migrating every other turn, do not limit their migration based on
   food, and have a 90% chance of migrating to better cities in the same
   nation (30% chance for foreign cities). This is designed to prevent a
