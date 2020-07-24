@@ -222,12 +222,11 @@ ruler_female_title = _("?female:Comrade %s")
 
 helptext = _("\
 A Bolshevik government is a centrally planned, single-party government\
- which ostensibly works toward a goal of creating a Communist system,\
+ which is meant to work toward a goal of creating a Communist system,\
  utilizing violent means. All goods are owned by the state, rather than\
  by private citizens, and utilized for the furthering of the state's\
- goals. Citizens are monitored and strictly controlled, and any dissidents\
- are quickly crushed. Bolshevism is a generally militaristic style of\
- government, but with minimal loss to trade.\
+ goals. Bolshevism is a generally militaristic style of government, but\
+ with minimal loss to trade.\
 "), _("\
 Bolshevism is a good government for maximizing shield production, and\
  for large empires.\
