@@ -731,6 +731,15 @@ reqs    =
 
 ; Corruption + waste = 30% for all govs
 
+[effect_corruption_revolution]
+type    = "Output_Waste"
+value   = 30
+reqs    =
+    { "type", "name", "range", "quiet"
+      "Gov", "Revolution", "Player", TRUE
+      "OutputType", "Trade", "Local", FALSE
+    }
+
 [effect_corruption_tribal]
 type    = "Output_Waste"
 value   = 30
@@ -846,6 +855,15 @@ reqs    =
       "OutputType", "Shield", "Local", FALSE
     }
 
+[effect_waste_revolution]
+type    = "Output_Waste"
+value   = 30
+reqs    =
+    { "type", "name", "range", "quiet"
+      "Gov", "Revolution", "Player", TRUE
+      "OutputType", "Shield", "Local", FALSE
+    }
+
 [effect_waste_anarchy]
 type    = "Output_Waste"
 value   = 30
@@ -909,6 +927,14 @@ reqs    =
       "OutputType", "Shield", "Local", FALSE
     }
 
+[effect_tech_upkeep_revolution]
+type    = "Tech_Upkeep_Free"
+value   = 999999
+reqs    =
+    { "type", "name", "range", "quiet"
+      "Gov", "Revolution", "Player", TRUE
+    }
+
 [effect_tech_upkeep_anarchy]
 type    = "Tech_Upkeep_Free"
 value   = 999999
@@ -931,6 +957,7 @@ value   = 1
 reqs    =
     { "type", "name", "range", "present"
       "OutputType", "Gold", "Local", TRUE
+      "Gov", "Revolution", "Player", FALSE
       "Gov", "Anarchy", "Player", FALSE
       "Gov", "Tribal", "Player", FALSE
       "Gov", "Communism", "Player", FALSE
@@ -949,6 +976,7 @@ value   = 1
 reqs    =
     { "type", "name", "range", "present"
       "OutputType", "Gold", "Local", TRUE
+      "Gov", "Revolution", "Player", FALSE
       "Gov", "Anarchy", "Player", FALSE
       "Gov", "Tribal", "Player", FALSE
       "Gov", "Communism", "Player", FALSE
@@ -966,7 +994,8 @@ value   = 1
 reqs    =
     { "type", "name", "range", "present"
       "OutputType", "Shield", "Local", TRUE
-;      "Gov", "Anarchy", "Player", FALSE
+;      "Gov", "Revolution", "Player", FALSE
+      "Gov", "Anarchy", "Player", FALSE
 ;      "Gov", "Tribal", "Player", FALSE
 ;      "Gov", "Communism", "Player", FALSE
       "Gov", "Despotism", "Player", FALSE
@@ -990,6 +1019,7 @@ type    = "Unhappy_Factor"
 value   = 1
 reqs   =
     { "type", "name", "range", "present"
+      "Gov", "Revolution", "Player", FALSE
       "Gov", "Anarchy", "Player", FALSE
       "Gov", "Tribal", "Player", FALSE
       "Gov", "Communism", "Player", FALSE
@@ -1035,6 +1065,7 @@ type    = "Make_Content_Mil"
 value   = 1
 reqs   =
     { "type", "name", "range", "present"
+;      "Gov", "Revolution", "Player", FALSE
       "Gov", "Anarchy", "Player", FALSE
       "Gov", "Tribal", "Player", FALSE
       "Gov", "Communism", "Player", FALSE
@@ -1052,6 +1083,7 @@ type    = "Make_Content_Mil"
 value   = 2
 reqs   =
     { "type", "name", "range", "present"
+      "Gov", "Revolution", "Player", FALSE
       "Gov", "Anarchy", "Player", FALSE
 ;      "Gov", "Tribal", "Player", FALSE
       "Gov", "Communism", "Player", FALSE
@@ -1069,6 +1101,7 @@ type    = "Make_Content_Mil"
 value   = 3
 reqs   =
     { "type", "name", "range", "present"
+      "Gov", "Revolution", "Player", FALSE
       "Gov", "Anarchy", "Player", FALSE
       "Gov", "Tribal", "Player", FALSE
 ;      "Gov", "Communism", "Player", FALSE
@@ -1089,15 +1122,6 @@ reqs    =
     { "type", "name", "range"
       "Building", "Women's Suffrage", "Player"
       "Gov", "Democracy", "Player"
-    }
-
-[effect_upkeep_free_units_anarchy]
-type    = "Unit_Upkeep_Free_Per_City"
-value   = 2
-reqs    =
-    { "type", "name", "range", "quiet"
-      "Gov", "Anarchy", "Player", TRUE
-      "OutputType", "Shield", "Local", FALSE
     }
 
 [effect_upkeep_free_units_tribal]
@@ -1628,6 +1652,7 @@ type    = "Martial_Law_Max"
 value   = 3
 reqs    =
     { "type", "name", "range", "present"
+      "Gov", "Revolution", "Player", FALSE
       "Gov", "Anarchy", "Player", FALSE
       "Gov", "Tribal", "Player", FALSE
 ;      "Gov", "Communism", "Player", FALSE
@@ -1640,12 +1665,12 @@ reqs    =
     }
 
 ; Railroad because makes Pyramids obsolete
-[effect_gov_tile_penalty_anarchy]
+[effect_gov_tile_penalty_revolution]
 type    = "Output_Penalty_Tile"
 value   = 2
 reqs    =
     { "type", "name", "range", "present", "quiet"
-      "Gov", "Anarchy", "Player", TRUE, TRUE
+      "Gov", "Revolution", "Player", TRUE, TRUE
       "Building", "Pyramids", "Player", FALSE, FALSE
       "Tech", "Railroad", "Player", FALSE, FALSE
     }
@@ -1668,6 +1693,15 @@ reqs    =
       "Gov", "Despotism", "Player", TRUE, TRUE
       "Building", "Pyramids", "Player", FALSE, FALSE
       "Tech", "Railroad", "Player", FALSE, FALSE
+    }
+
+[effect_gov_tile_bonus_anarchy]
+type    = "Output_Inc_Tile"
+value   = 1
+reqs    =
+    { "type", "name", "range", "present", "quiet"
+      "Gov", "Anarchy", "Player", TRUE, TRUE
+      "TerrainClass", "Oceanic", "Local", FALSE, FALSE
     }
 
 [effect_gov_tile_bonus_republic]
@@ -1696,6 +1730,7 @@ value   = 1
 reqs    =
     { "type", "name", "range", "present", "quiet"
       "OutputType", "Trade", "Local", TRUE, TRUE
+      "Gov", "Revolution", "Player", FALSE, FALSE
       "Gov", "Anarchy", "Player", FALSE, FALSE
       "Gov", "Tribal", "Player", FALSE, FALSE
       "Gov", "Communism", "Player", FALSE, FALSE
@@ -3440,24 +3475,6 @@ value   = 1
 reqs    =
     { "type", "name", "range", "survives"
       "Building", "Manhattan Project", "World", TRUE
-    }
-
-[effect_manhattan_project_cold_war]
-type    = "Gain_AI_Love"
-value   = 50
-reqs    =
-    { "type", "name", "range", "survives"
-      "Building", "Manhattan Project", "World", TRUE
-      "Tech", "Nuclear Fission", "Player", FALSE
-    }
-
-[effect_manhattan_project_cold_war_1]
-type    = "Gain_AI_Love"
-value   = 50
-reqs    =
-    { "type", "name", "range", "survives"
-      "Building", "Manhattan Project", "World", TRUE
-      "Tech", "Superconductors", "Player", FALSE
     }
 
 [effect_manhattan_project_culture]

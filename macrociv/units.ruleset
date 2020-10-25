@@ -1500,6 +1500,8 @@ turn not spent in a city, airstrip, or airbase, or on a Carrier.\
 name          = _("Bomber")
 class         = "Air"
 tech_req      = "Advanced Flight"
+gov_req       = "Tribal", "Despotism", "Monarchy", "Communism",
+                "Fundamentalism", "Federation", "Republic", "Democracy"
 obsolete_by   = "Stealth Bomber"
 graphic       = "u.bomber"
 graphic_alt   = "-"
@@ -1616,6 +1618,8 @@ An improved Fighter, with improved attack and a higher movement\
 name          = _("Stealth Bomber")
 class         = "Air"
 tech_req      = "Stealth"
+gov_req       = "Tribal", "Despotism", "Monarchy", "Communism",
+                "Fundamentalism", "Federation", "Republic", "Democracy"
 obsolete_by   = "None"
 graphic       = "u.stealth_bomber"
 graphic_alt   = "-"
@@ -1930,6 +1934,8 @@ AEGIS Cruisers are upgraded Cruisers equipped with an advanced\
 name          = _("Battleship")
 class         = "Sea"
 tech_req      = "Steel"
+gov_req       = "Tribal", "Despotism", "Monarchy", "Communism",
+                "Fundamentalism", "Federation", "Republic", "Democracy"
 obsolete_by   = "Carrier"
 graphic       = "u.battleship"
 graphic_alt   = "-"
@@ -2000,6 +2006,8 @@ Traveling under the surface of the ocean, Submarines have\
 name          = _("Carrier")
 class         = "Sea"
 tech_req      = "Advanced Flight"
+gov_req       = "Tribal", "Despotism", "Monarchy", "Communism",
+                "Fundamentalism", "Federation", "Republic", "Democracy"
 obsolete_by   = "None"
 graphic       = "u.carrier"
 graphic_alt   = "-"
@@ -2086,6 +2094,8 @@ tiles (for use by Offshore Platforms).\
 name          = _("Cruise Missile")
 class         = "Missile"
 tech_req      = "Rocketry"
+gov_req       = "Tribal", "Despotism", "Monarchy", "Communism",
+                "Fundamentalism", "Federation", "Republic", "Democracy"
 obsolete_by   = "None"
 graphic       = "u.cruise_missile"
 graphic_alt   = "-"
@@ -2122,6 +2132,8 @@ TIP:  A handful of these can successfully keep the waters around\
 name          = _("Nuclear")
 class         = "Missile"
 tech_req      = "Nuclear Fission"
+gov_req       = "Tribal", "Despotism", "Monarchy", "Communism",
+                "Fundamentalism", "Federation", "Republic", "Democracy"
 obsolete_by   = "Nuclear ICBM"
 graphic       = "u.nuclear"
 graphic_alt   = "-"
@@ -2173,6 +2185,8 @@ Nuclear fallout reduces tile output and increases the risk of global\
 name          = _("Nuclear ICBM")
 class         = "Missile"
 tech_req      = "Superconductors"
+gov_req       = "Tribal", "Despotism", "Monarchy", "Communism",
+                "Fundamentalism", "Federation", "Republic", "Democracy"
 obsolete_by   = "None"
 graphic       = "u.nuclear"
 graphic_alt   = "-"
@@ -2226,6 +2240,8 @@ paratroopers_mr_sub = 16
 name          = _("Diplomat")
 class         = "Small Land"
 tech_req      = "Alphabet"
+gov_req       = "Tribal", "Despotism", "Monarchy", "Communism",
+                "Fundamentalism", "Federation", "Republic", "Democracy"
 obsolete_by   = "Spy"
 graphic       = "u.diplomat"
 graphic_alt   = "-"
@@ -2333,6 +2349,8 @@ Diplomats built under Bolshevik or Federation governments will\
 name          = _("Spy")
 class         = "Small Land"
 tech_req      = "Espionage"
+gov_req       = "Tribal", "Despotism", "Monarchy", "Communism",
+                "Fundamentalism", "Federation", "Republic", "Democracy"
 obsolete_by   = "None"
 graphic       = "u.spy"
 graphic_alt   = "-"

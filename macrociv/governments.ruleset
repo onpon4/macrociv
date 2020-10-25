@@ -15,7 +15,7 @@ description="Civ2Civ3 governments data for Freeciv"
 options="+Freeciv-2.6-ruleset"
 
 [governments]
-during_revolution="Anarchy"
+during_revolution="Revolution"
 
 ; /* <-- avoid gettext warnings
 ;
@@ -53,6 +53,40 @@ during_revolution="Anarchy"
 ; */ <-- avoid gettext warnings
 
 ;------------------------------------------------------------------------
+[government_revolution]
+
+name        = _("Revolution")
+; No reqs
+graphic     = "gov.anarchy"
+graphic_alt = "-"
+
+ruler_male_title = _("Usurper %s")
+ruler_female_title = _("?female:Usurper %s")
+
+helptext = _("\
+When the citizenry is majorly unsatisfied with the function of\
+ government, or (more commonly) when elites wish to further their own\
+ goals, a revolution may occur. The revolutionary period is chaotic\
+ and leads to a loss of productivity in the short-term, but may be\
+ beneficial in the long-term.\ 
+"),
+; /* xgettext:no-c-format */
+_("\
+* Technologies do not require any upkeep.\n\
+* Each worked tile that gives more than 2 Food, Shield, or Trade will\
+ suffer a -1 penalty, unless the city working it is celebrating.\
+ (Cities below size 3 will not celebrate.)\n\
+* Each city can support one unit for free; further units each cost\
+ 1 shield per turn.\n\
+* You have no control over tax rates. Trade income all goes to luxuries.\n\
+* Base corruption is 30% (the highest under any government). This\
+ increases with distance from the capital (half as fast with knowledge\
+ of The Corporation).\n\
+* Base production waste is 30%. This increases with distance from the\
+ capital (half as fast with knowledge of Trade).\
+")
+
+;------------------------------------------------------------------------
 [government_anarchy]
 
 name        = _("Anarchy")
@@ -65,28 +99,20 @@ ruler_female_title = _("?female:Comrade %s")
 
 helptext = _("\
 Anarchy is a system where the people govern themselves. Citizens are\
- very happy and self-sustaining under this form of government, but a\
- lack of central authority and national unity leads to trade being less\
- productive and citizens being unwilling to participate in aggressive\
- military action, which makes this form of government less than ideal\
- for building an empire.\
+ very happy and self-sustaining under this form of government, but very\
+ unwilling to engage in conquest or espionage.\
 "), _("\
-Because citizens are generally very willing to support an Anarchist\
- government, elites use the promise of Anarchy to gain popular support\
- for inciting a revolt, only for those same elites to wrestle control\
- back away from the people and establish a different form of government\
- more suited to their goals.\
+Diplomats, Spies, Battleships, Carriers, Bombers, and missiles cannot\
+ be built under Anarchy.\
 "),
 ; /* xgettext:no-c-format */
 _("\
+* Cities produce an extra Food, Shield, or Trade point for every worked\
+ land tile that is already producing the respective resource.\n\
 * Technologies do not require any upkeep.\n\
-* Each worked tile that gives more than 2 Food, Shield, or Trade will\
- suffer a -1 penalty, unless the city working it is celebrating.\
- (Cities below size 3 will not celebrate.)\n\
-* Each city can support up to 2 units for free; further units each cost\
- 1 shield per turn.\n\
+* Units do not require any shield or gold upkeep (but certain units\
+ require food upkeep).\n\
 * Each aggressively deployed military unit causes 2 unhappy citizens.\n\
-* You have no control over tax rates. Trade income all goes to luxuries.\n\
 * There is no corruption.\n\
 * Base production waste is 30%, but is not affected by distance to the
  capital.\n\
