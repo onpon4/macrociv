@@ -1852,7 +1852,7 @@ Cities built on or next to rivers incur a small risk of flooding,\
 extra          = "Fort"
 gui_type       = "Fortress"
 border_sq      = -1
-flags          = "DiplomatDefense"
+flags          = "NoAggressive", "DiplomatDefense"
 
 [base_fortress]
 extra          = "Fortress"
@@ -1864,7 +1864,7 @@ flags          = "NoAggressive", "DiplomatDefense"
 extra          = "Airstrip"
 gui_type       = "Airbase"
 border_sq      = -1
-flags          = "ParadropFrom"
+flags          = "NoAggressive", "ParadropFrom"
 
 [base_airbase]
 extra          = "Airbase"
@@ -1876,10 +1876,12 @@ flags          = "NoAggressive", "ParadropFrom"
 extra          = "Buoy"
 gui_type       = "Fortress"
 vision_main_sq = 5
+flags          = "NoAggressive"
 
 [base_ruins]
 extra          = "Ruins"
 gui_type       = "Other"
+flags          = "NoAggressive"
 
 ; /* <-- avoid gettext warnings
 ;
