@@ -326,16 +326,28 @@ sets this ruleset apart:
   and they no longer can do the "Help Build Wonder" action, since the
   reduced cost makes the action not especially useful.
 
-- The Anarchy government has been changed to better reflect what anarchy
-  is about. Most notably, a society under anarchy now will never succumb
-  to civil war, is absent of corruption, can inspire partisans, and does
-  not lose efficiency with distance to the capital; but is somewhat
-  inefficient at production, utilizes trade only for luxuries, and is
-  very strongly anti-war. No aggressive military units are tolerated,
-  with each one creating two unhappy citizens (like under Democracy in
-  the Classic ruleset), and it also has a senate that can prevent the
-  declaration of war. Additionally, martial law cannot be enforced and
-  methods of preventing military unhappiness don't work under Anarchy.
+- The revolution government is now called "Revolution". Under
+  Revolution, tiles with more than 2 resources suffer a -1 penalty, all
+  income goes to luxuries, 1 unit is supported for free, and base
+  corruption and production waste are both 30% (the highest of any
+  government).
+
+- The Anarchy government is now a regular government choice and has been
+  changed to better reflect what anarchy is about. Most notably, a
+  society under Anarchy now is very efficient at all forms of production
+  and trade, does not require technology upkeep, maintains all units for
+  free (except for any food upkeep), will never succumb to civil war, is
+  absent of corruption, can inspire partisans, and does not lose
+  efficiency with location (as there is no capital); but does not
+  benefit from most wonders and is very strongly anti-war. No aggressive
+  military units are tolerated, with each one creating two unhappy
+  citizens (like under Democracy in the Classic ruleset), and it also
+  has a senate that can prevent the declaration of war. Additionally,
+  martial law cannot be enforced and methods of preventing military
+  unhappiness don't work under Anarchy.
+
+- All governments except Anarchy and Tribalism now require you to have a
+  Palace to be chosen for a revolution.
 
 - The Communism government has been renamed to "Bolshevism". Bolshevik
   governments do not get military unhappiness, have a flat corruption
@@ -404,9 +416,7 @@ Civ2Civ3:
 
 - Starting tech level is 0 once again.
 
-- Borders expand to the unknown, revealing unknown tiles. They prevent
-  military aggression, do not restrict infrastructure, and are fogged
-  (i.e. fog of war prevents you from seeing enemy border changes).
+- Borders are disabled.
 
 - The killstack setting has been disabled; if multiple units are on a
   single tile, you have to kill them one at a time. This is actually
@@ -469,15 +479,6 @@ possible.
   minimize this, I decided that it was an acceptable compromise to set
   citymindist to 2 instead. Of course, this can be adjusted by players.
 
-- I wanted to rename Anarchy to something else and redefine Anarchy as
-  a permanent government with unique properties, but this is currently
-  not feasible as some text hardcodes the word "anarchy" in reference to
-  revolutions. That being said, I did come up with a reasonable
-  compromise in the way I modified the Anarchy government's description
-  and properties, which sort of justifies a need for constant revolution
-  to maintain Anarchy (if you want to do so), and a reason why you
-  (as an elite with imperial ambitions) probably shouldn't.
-
 - I wanted to extend guerrilla warfare to the ancient world (and make
   Warriors, Musketeers, and Riflemen act as partisans in their
   respective eras), but the engine currently only allows one unit to be
@@ -492,11 +493,10 @@ possible.
 
 - The revolution government currently has a hardcoded effect which
   forces taxes to be assigned a particular way. I wanted to create a
-  modified fixed ratio (including both science and luxuries) for a
-  version of the Anarchy government that is a target government, but
-  since the "force to luxuries" effect is hardcoded to work on the
-  revolution government and is not configurable, I wasn't able to do
-  this.
+  modified fixed ratio (including both science and luxuries) for
+  Anarchy, but since the "force to luxuries" effect is hardcoded to work
+  on the revolution government and is not configurable, I wasn't able to
+  do this.
 
 - I wanted to make Freeciv able to simulate the real-life "mutually
   assured destruction" scenario we have from nuclear weapons. I was able
@@ -516,17 +516,6 @@ possible.
   weapons for retaliatory strikes, but there is currently no way to do
   so. AI players also in general don't grasp the importance of nukes in
   this ruleset, which leaves them vulnerable in the nuclear age.
-
-- One important aspect of this ruleset was to try to simulate the era of
-  peace brought on by the threat of mutually assured destruction from
-  nukes. The best way I found to achieve this, given the current engine,
-  is to award all players "AI love" points. This implementation is not
-  perfect, however; truly achieving my goal on this would require a
-  change to the AI so that they can be made to value peace, rather than
-  thinking single-mindedly about conquest. A huge problem here is the
-  fact that the AI functions on a "How much do I love or hate nation X?"
-  way of thinking, rather than a more practical "Is it better for me to
-  fight nation X or make peace with them?" approach.
 
 - This one's a bit of a tangent, but as I was working on this ruleset,
   I got to thinking that it would be real nice if you could enter into

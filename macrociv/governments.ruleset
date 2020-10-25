@@ -57,8 +57,8 @@ during_revolution="Revolution"
 
 name        = _("Revolution")
 ; No reqs
-graphic     = "gov.anarchy"
-graphic_alt = "-"
+graphic     = "gov.revolution"
+graphic_alt = "citizen.angry_0"
 
 ruler_male_title = _("Usurper %s")
 ruler_female_title = _("?female:Usurper %s")
@@ -100,10 +100,7 @@ ruler_female_title = _("?female:Comrade %s")
 helptext = _("\
 Anarchy is a system where the people govern themselves. Citizens are\
  very happy and self-sustaining under this form of government, but very\
- unwilling to engage in conquest or espionage.\
-"), _("\
-Diplomats, Spies, Battleships, Carriers, Bombers, and missiles cannot\
- be built under Anarchy.\
+ unwilling to engage in conquest.\
 "),
 ; /* xgettext:no-c-format */
 _("\
@@ -113,9 +110,10 @@ _("\
 * Units do not require any shield or gold upkeep (but certain units\
  require food upkeep).\n\
 * Each aggressively deployed military unit causes 2 unhappy citizens.\n\
+* There is no capital (Palaces have no effect) and civil war cannot\
+ occur.\n\
 * There is no corruption.\n\
-* Base production waste is 30%, but is not affected by distance to the
- capital.\n\
+* Base production waste is 30% for all cities.\n\
 * Has a senate that may prevent declaration of war.\
 ")
 
@@ -162,7 +160,9 @@ _("\
 [government_despotism]
 
 name        = _("Despotism")
-; No reqs
+reqs = { "type", "name", "range"
+         "Building", "Palace", "Player"
+       }
 graphic     = "gov.despotism"
 graphic_alt = "-"
 ai_better   = "Monarchy"
@@ -201,6 +201,7 @@ _("\
 name        = _("Monarchy")
 reqs = { "type", "name", "range"
          "tech", "Monarchy", "Player"
+         "Building", "Palace", "Player"
        }
 graphic     = "gov.monarchy"
 graphic_alt = "-"
@@ -239,6 +240,7 @@ name        = _("Bolshevism")
 rule_name   = "Communism"
 reqs = { "type", "name", "range"
          "tech", "Communism", "Player"
+         "Building", "Palace", "Player"
        }
 graphic     = "gov.communism"
 graphic_alt = "-"
@@ -275,6 +277,7 @@ _("\
 name        = _("Fundamentalism")
 reqs = { "type", "name", "range"
          "tech", "Theology", "Player"
+         "Building", "Palace", "Player"
        }
 graphic     = "gov.fundamentalism"
 graphic_alt = "-"
@@ -319,6 +322,7 @@ _("\
 name        = _("Federation")
 reqs = { "type", "name", "range"
          "tech", "Economics", "Player"
+         "Building", "Palace", "Player"
        }
 graphic     = "gov.federation"
 graphic_alt = "s.tax_gold"
@@ -355,6 +359,7 @@ _("\
 name        = _("Republic")
 reqs = { "type", "name", "range"
          "tech", "The Republic", "Player"
+         "Building", "Palace", "Player"
        }
 graphic     = "gov.republic"
 graphic_alt = "-"
@@ -393,6 +398,7 @@ _("\
 name        = _("Democracy")
 reqs = { "type", "name", "range"
          "tech", "Democracy", "Player"
+         "Building", "Palace", "Player"
        }
 graphic     = "gov.democracy"
 graphic_alt = "-"

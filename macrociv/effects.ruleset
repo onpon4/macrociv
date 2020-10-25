@@ -1355,8 +1355,8 @@ reqs    =
 type    = "Civil_War_Chance"
 value   = 0
 reqs    =
-    { "type", "name", "range"
-      "Gov", "Anarchy", "Player"
+    { "type", "name", "range", "quiet"
+      "Gov", "Anarchy", "Player", TRUE
     }
 
 [effect_civil_war_tribal]
@@ -1742,6 +1742,14 @@ reqs    =
 ;      "Gov", "Democracy", "Player", FALSE, FALSE
     }
 
+[effect_spyresist_anarchy]
+type    = "Spy_Resistant"
+value   = 50
+reqs    =
+    { "type", "name", "range"
+      "Gov", "Anarchy", "Player"
+    }
+
 [effect_content_tribal]
 type    = "Make_Content"
 value   = 1
@@ -1777,6 +1785,14 @@ reqs    =
       "Gov", "Democracy", "Player"
     }
 
+[effect_senate_anarchy]
+type    = "Has_Senate"
+value   = 1
+reqs    =
+    { "type", "name", "range", "present"
+      "Gov", "Anarchy", "Player", TRUE
+    }
+
 [effect_senate_federation]
 type    = "Has_Senate"
 value   = 1
@@ -1792,15 +1808,6 @@ value   = 1
 reqs    =
     { "type", "name", "range", "present"
       "Gov", "Democracy", "Player", TRUE
-      "Building", "Statue of Liberty", "Player", FALSE
-    }
-
-[effect_senate_anarchy]
-type    = "Has_Senate"
-value   = 1
-reqs    =
-    { "type", "name", "range", "present"
-      "Gov", "Anarchy", "Player", TRUE
       "Building", "Statue of Liberty", "Player", FALSE
     }
 
@@ -2518,42 +2525,50 @@ reqs    =
 type    = "Output_Waste_Pct"
 value   = 50
 reqs    =
-    { "type", "name", "range"
-      "Building", "Palace", "City"
-      "OutputType", "Trade", "Local"
+    { "type", "name", "range", "present"
+      "Building", "Palace", "City", TRUE
+      "OutputType", "Trade", "Local", TRUE
+      "Gov", "Revolution", "Player", FALSE
+      "Gov", "Anarchy", "Player", FALSE
     }
 
 [effect_palace_1]
 type    = "Output_Waste_Pct"
 value   = 50
 reqs    =
-    { "type", "name", "range"
-      "Building", "Palace", "City"
-      "OutputType", "Shield", "local"
+    { "type", "name", "range", "present"
+      "Building", "Palace", "City", TRUE
+      "OutputType", "Shield", "local", TRUE
+      "Gov", "Revolution", "Player", FALSE
+      "Gov", "Anarchy", "Player", FALSE
     }
 
 [effect_palace_2]
 type    = "Spy_Resistant"
 value   = 50
 reqs    =
-    { "type", "name", "range"
-      "Building", "Palace", "City"
+    { "type", "name", "range", "present"
+      "Building", "Palace", "City", TRUE
+      "Gov", "Revolution", "Player", FALSE
+      "Gov", "Anarchy", "Player", FALSE
     }
 
 [effect_palace_3]
 type    = "Capital_City"
 value   = 1
 reqs    =
-    { "type", "name", "range"
-      "Building", "Palace", "City"
+    { "type", "name", "range", "present"
+      "Building", "Palace", "City", TRUE
+      "Gov", "Anarchy", "Player", FALSE
     }
 
 [effect_palace_gov_center]
 type    = "Gov_Center"
 value	= 1
 reqs	=
-    { "type", "name", "range"
-      "Building", "Palace", "City"
+    { "type", "name", "range", "present"
+      "Building", "Palace", "City", TRUE
+      "Gov", "Anarchy", "Player", FALSE
     }
 
 [effect_palace_despotism]
@@ -2602,6 +2617,8 @@ reqs    =
       "Building", "Ecclesiastical Palace", "City", TRUE
       "OutputType", "Shield", "local", TRUE
       "Building", "Palace", "City", FALSE
+      "Gov", "Revolution", "Player", FALSE
+      "Gov", "Anarchy", "Player", FALSE
     }
 
 [effect_ecclesiastical_palace_2]
@@ -2611,6 +2628,8 @@ reqs    =
     { "type", "name", "range", "present"
       "Building", "Ecclesiastical Palace", "City", TRUE
       "Building", "Palace", "City", FALSE
+      "Gov", "Revolution", "Player", FALSE
+      "Gov", "Anarchy", "Player", FALSE
     }
 
 [effect_ecclesiastical_palace_gov_center]
@@ -2620,6 +2639,7 @@ reqs	=
     { "type", "name", "range", "present"
       "Building", "Ecclesiastical Palace", "City", TRUE
       "Building", "Palace", "City", FALSE
+      "Gov", "Anarchy", "Player", FALSE
     }
 
 [effect_ecclesiastical_palace_despotism]
@@ -3018,8 +3038,10 @@ reqs    =
 type    = "Reveal_Map"
 value   = 1
 reqs    =
-    { "type", "name", "range"
-      "Building", "Apollo Program", "Player"
+    { "type", "name", "range", "present"
+      "Building", "Apollo Program", "Player", TRUE
+      "Gov", "Revolution", "Player", FALSE
+      "Gov", "Anarchy", "Player", FALSE
     }
 
 [effect_apollo_program_culture]
@@ -3034,10 +3056,12 @@ reqs	=
 type    = "Output_Add_Tile"
 value   = 2
 reqs    =
-    { "type", "name", "range"
-      "Building", "A.Smith's Trading Co.", "Player"
-      "CityTile", "Center", "Local"
-      "OutputType", "Gold", "Local"
+    { "type", "name", "range", "present"
+      "Building", "A.Smith's Trading Co.", "Player", TRUE
+      "CityTile", "Center", "Local", TRUE
+      "OutputType", "Gold", "Local", TRUE
+      "Gov", "Revolution", "Player", FALSE
+      "Gov", "Anarchy", "Player", FALSE
     }
 
 ;2 + 1 = 3
@@ -3108,7 +3132,7 @@ type    = "Health_Pct"
 value   = 10
 reqs    =
     { "type", "name", "range"
-      "Building", "Cure For Cancer", "Player"
+      "Building", "Cure For Cancer", "World"
     }
 
 [effect_cure_for_cancer_culture]
@@ -3121,10 +3145,10 @@ reqs	=
 
 [effect_darwins_voyage]
 type    = "Output_Add_Tile"
-value   = 1
+value   = 2
 reqs    =
     { "type", "name", "range"
-      "Building", "Darwin's Voyage", "Player"
+      "Building", "Darwin's Voyage", "City"
       "CityTile", "Center", "Local"
       "OutputType", "Science", "Local"
     }
@@ -3248,18 +3272,22 @@ reqs	=
 type    = "Make_Content"
 value   = 1
 reqs    =
-    { "type", "name", "range"
-      "Building", "Hanging Gardens", "Player"
+    { "type", "name", "range", "present"
+      "Building", "Hanging Gardens", "Player", TRUE
+      "Gov", "Revolution", "Player", FALSE
+      "Gov", "Anarchy", "Player", FALSE
     }
 
 [effect_hanging_gardens_1]
 type    = "Output_Add_Tile"
 value   = 4
 reqs    =
-    { "type", "name", "range"
-      "Building", "Hanging Gardens", "City"
-      "CityTile", "Center", "Local"
-      "OutputType", "Luxury", "Local"
+    { "type", "name", "range", "present"
+      "Building", "Hanging Gardens", "City", TRUE
+      "CityTile", "Center", "Local", TRUE
+      "OutputType", "Luxury", "Local", TRUE
+      "Gov", "Revolution", "Player", FALSE
+      "Gov", "Anarchy", "Player", FALSE
     }
 
 [effect_hanging_gardens_culture]
@@ -3319,10 +3347,12 @@ reqs	=
 type    = "Output_Add_Tile"
 value   = 2
 reqs    =
-    { "type", "name", "range"
-      "Building", "J.S. Bach's Cathedral", "Player"
-      "CityTile", "Center", "Local"
-      "OutputType", "Luxury", "Local"
+    { "type", "name", "range", "present"
+      "Building", "J.S. Bach's Cathedral", "Player", TRUE
+      "CityTile", "Center", "Local", TRUE
+      "OutputType", "Luxury", "Local", TRUE
+      "Gov", "Revolution", "Player", FALSE
+      "Gov", "Anarchy", "Player", FALSE
     }
 
 [effect_js_bachs_cathedral_culture]
@@ -3337,17 +3367,21 @@ reqs	=
 type    = "Make_Content_Mil"
 value   = 1
 reqs    =
-    { "type", "name", "range"
-      "Building", "King Richard's Crusade", "Player"
+    { "type", "name", "range", "present"
+      "Building", "King Richard's Crusade", "Player", TRUE
+      "Gov", "Revolution", "Player", FALSE
+      "Gov", "Anarchy", "Player", FALSE
     }
 
 [effect_king_richards_crusade_1]
 type    = "Unit_Upkeep_Free_Per_City"
 value   = 2
 reqs    =
-    { "type", "name", "range"
-      "Building", "King Richard's Crusade", "Player"
-      "OutputType", "Gold", "Local"
+    { "type", "name", "range", "present"
+      "Building", "King Richard's Crusade", "Player", TRUE
+      "OutputType", "Gold", "Local", TRUE
+      "Gov", "Revolution", "Player", FALSE
+      "Gov", "Anarchy", "Player", FALSE
     }
 
 [effect_king_richards_crusade_culture]
@@ -3378,9 +3412,11 @@ reqs	=
 type    = "Move_Bonus"
 value   = 1
 reqs    =
-    { "type", "name", "range"
-      "Building", "Lighthouse", "Player"
-      "UnitClass", "Sea", "Local"
+    { "type", "name", "range", "present"
+      "Building", "Lighthouse", "Player", TRUE
+      "UnitClass", "Sea", "Local", TRUE
+      "Gov", "Revolution", "Player", FALSE
+      "Gov", "Anarchy", "Player", FALSE
     }
 
 [effect_lighthouse_veteran]
@@ -3393,6 +3429,8 @@ reqs    =
       "UnitFlag", "NonMil", "Local", FALSE
       "UnitFlag", "NoVeteran", "Local", FALSE
       "Tech", "Amphibious Warfare", "Player", FALSE
+      "Gov", "Revolution", "Player", FALSE
+      "Gov", "Anarchy", "Player", FALSE
     }
 
 [effect_lighthouse_trireme_move]
@@ -3402,23 +3440,8 @@ reqs    =
     { "type", "name", "range", "present"
       "Building", "Lighthouse", "Player", TRUE
       "UnitClass", "Trireme", "Local", TRUE
-; No move bonus to Triremes starting their turn on rivers
-; We also disable move bonus for city tiles in this clause...
-      "Extra", "River", "Local", FALSE
-      "CityTile", "Center", "Local", FALSE
-    }
-
-; ...so that we can use this one to avoid penalising Triremes which start
-; in a perfectly legal coastal city which also happens to be on a river
-[effect_lighthouse_trireme_move_2]
-type    = "Move_Bonus"
-value   = 1
-reqs    =
-    { "type", "name", "range"
-      "Building", "Lighthouse", "Player"
-      "UnitClass", "Trireme", "Local"
-      "CityTile", "Center", "Local"
-      "TerrainClass", "Oceanic", "Adjacent"
+      "Gov", "Revolution", "Player", FALSE
+      "Gov", "Anarchy", "Player", FALSE
     }
 
 [effect_lighthouse_trireme_veteran]
@@ -3431,6 +3454,8 @@ reqs    =
       "UnitFlag", "NonMil", "Local", FALSE
       "UnitFlag", "NoVeteran", "Local", FALSE
       "Tech", "Amphibious Warfare", "Player", FALSE
+      "Gov", "Revolution", "Player", FALSE
+      "Gov", "Anarchy", "Player", FALSE
     }
 
 [effect_lighthouse_culture]
@@ -3445,9 +3470,11 @@ reqs	=
 type    = "Move_Bonus"
 value   = 1
 reqs    =
-    { "type", "name", "range"
-      "Building", "Magellan's Expedition", "Player"
-      "UnitClass", "Sea", "Local"
+    { "type", "name", "range", "present"
+      "Building", "Magellan's Expedition", "Player", TRUE
+      "UnitClass", "Sea", "Local", TRUE
+      "Gov", "Revolution", "Player", FALSE
+      "Gov", "Anarchy", "Player", FALSE
     }
 
 [effect_magellans_expedition_veteran]
@@ -3459,6 +3486,8 @@ reqs    =
       "UnitClass", "Sea", "Local", TRUE
       "UnitFlag", "NonMil", "Local", FALSE
       "UnitFlag", "NoVeteran", "Local", FALSE
+      "Gov", "Revolution", "Player", FALSE
+      "Gov", "Anarchy", "Player", FALSE
     }
 
 [effect_magellans_expedition_culture]
@@ -3505,9 +3534,11 @@ reqs    =
 type    = "Make_Content"
 value   = 3
 reqs    =
-    { "type", "name", "range"
-      "Tech", "Monotheism", "Player"
-      "Building", "Michelangelo's Chapel", "Player"
+    { "type", "name", "range", "present"
+      "Tech", "Monotheism", "Player", TRUE
+      "Building", "Michelangelo's Chapel", "Player", TRUE
+      "Gov", "Revolution", "Player", FALSE
+      "Gov", "Anarchy", "Player", FALSE
     }
 
 [effect_michelangelos_chapel_culture]
@@ -3522,18 +3553,22 @@ reqs    =
 type    = "Make_Content"
 value   = 1
 reqs    =
-    { "type", "name", "range"
-      "Tech", "Masonry", "Player"
-      "Building", "Mausoleum of Mausolos", "Player"
+    { "type", "name", "range", "present"
+      "Tech", "Masonry", "Player", TRUE
+      "Building", "Mausoleum of Mausolos", "Player", TRUE
+      "Gov", "Revolution", "Player", FALSE
+      "Gov", "Anarchy", "Player", FALSE
     }
 
 [effect_mausoleum_of_mausolos_1]
 type    = "Make_Content"
 value   = 1
 reqs    =
-    { "type", "name", "range"
-      "Tech", "Code of Laws", "Player"
-      "Building", "Mausoleum of Mausolos", "Player"
+    { "type", "name", "range", "present"
+      "Tech", "Code of Laws", "Player", TRUE
+      "Building", "Mausoleum of Mausolos", "Player", TRUE
+      "Gov", "Revolution", "Player", FALSE
+      "Gov", "Anarchy", "Player", FALSE
     }
 
 [effect_mausoleum_of_mausolos_culture]
@@ -3549,17 +3584,21 @@ reqs	=
 type    = "Make_Content_Mil"
 value   = 1
 reqs    =
-    { "type", "name", "range"
-      "Building", "Statue of Zeus", "Player"
+    { "type", "name", "range", "present"
+      "Building", "Statue of Zeus", "Player", TRUE
+      "Gov", "Revolution", "Player", FALSE
+      "Gov", "Anarchy", "Player", FALSE
     }
 
 [effect_statue_of_zeus_1]
 type    = "Unit_Upkeep_Free_Per_City"
 value   = 1
 reqs    =
-    { "type", "name", "range"
-      "Building", "Statue of Zeus", "Player"
-      "OutputType", "Shield", "Local"
+    { "type", "name", "range", "present"
+      "Building", "Statue of Zeus", "Player", TRUE
+      "OutputType", "Shield", "Local", TRUE
+      "Gov", "Revolution", "Player", FALSE
+      "Gov", "Anarchy", "Player", FALSE
     }
 
 [effect_statue_of_zeus_culture]
@@ -3574,9 +3613,11 @@ reqs	=
 type    = "Make_Content"
 value   = 2
 reqs    =
-    { "type", "name", "range"
-      "Tech", "Ceremonial Burial", "Player"
-      "Building", "Temple of Artemis", "Player"
+    { "type", "name", "range", "present"
+      "Tech", "Ceremonial Burial", "Player", TRUE
+      "Building", "Temple of Artemis", "Player", TRUE
+      "Gov", "Revolution", "Player", FALSE
+      "Gov", "Anarchy", "Player", FALSE
     }
 
 [effect_temple_of_artemis_culture]
@@ -3591,9 +3632,11 @@ reqs	=
 type    = "Output_Inc_Tile"
 value   = 1
 reqs    =
-    { "type", "name", "range"
-      "Building", "Pyramids", "City"
-      "OutputType", "Shield", "Local"
+    { "type", "name", "range", "present"
+      "Building", "Pyramids", "City", TRUE
+      "OutputType", "Shield", "Local", TRUE
+      "Gov", "Revolution", "Player", FALSE
+      "Gov", "Anarchy", "Player", FALSE
     }
 
 [effect_pyramids_culture]
@@ -3618,8 +3661,10 @@ reqs    =
 type    = "Reveal_Cities"
 value   = 1
 reqs    =
-    { "type", "name", "range"
-      "Building", "Internet", "Player"
+    { "type", "name", "range", "present"
+      "Building", "Internet", "Player", TRUE
+      "Gov", "Revolution", "Player", FALSE
+      "Gov", "Anarchy", "Player", FALSE
     }
 
 [effect_internet_2]
@@ -3681,8 +3726,10 @@ reqs	=
 type    = "Any_Government"
 value   = 1
 reqs    =
-    { "type", "name", "range"
-      "Building", "Statue of Liberty", "Player"
+    { "type", "name", "range", "present"
+      "Building", "Statue of Liberty", "Player", TRUE
+      "Gov", "Revolution", "Player", FALSE
+      "Gov", "Anarchy", "Player", FALSE
     }
 
 [effect_statue_of_liberty_culture]

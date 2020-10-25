@@ -813,7 +813,7 @@ set =
       "mgr_nationchance", 90
       "mgr_worldchance", 30
       "techlevel", 0
-      "borders", "EXPAND"
+      "borders", "DISABLED"
       "happyborders", "ALLIED"
       "foggedborders", "ENABLED"
       "restrictinfra", "DISABLED"
