@@ -1493,7 +1493,7 @@ upgraded to Fortresses.\
 _("\
 Compared to a fort, units in a fortress receive extra defense (+50%) \
 against all units (in total, their defense against land units and boats \
-is doubled), and do not count as aggressive if near a friendly city. \
+is doubled). \
 Any kind of land unit remaining in a fortress for a whole turn without \
 moving recovers a quarter of its hit points.\
 "), _("\
