@@ -1742,6 +1742,14 @@ reqs    =
 ;      "Gov", "Democracy", "Player", FALSE, FALSE
     }
 
+[effect_aihate_anarchy]
+type    = "Gain_AI_Love"
+value   = -20
+reqs    =
+    { "type", "name", "range"
+      "Building", "Eiffel Tower", "Player"
+    }
+
 [effect_spyresist_anarchy]
 type    = "Spy_Resistant"
 value   = 50
@@ -1789,7 +1797,7 @@ reqs    =
 type    = "Has_Senate"
 value   = 1
 reqs    =
-    { "type", "name", "range", "present"
+    { "type", "name", "range", "quiet"
       "Gov", "Anarchy", "Player", TRUE
     }
 
@@ -3661,10 +3669,8 @@ reqs    =
 type    = "Reveal_Cities"
 value   = 1
 reqs    =
-    { "type", "name", "range", "present"
-      "Building", "Internet", "Player", TRUE
-      "Gov", "Revolution", "Player", FALSE
-      "Gov", "Anarchy", "Player", FALSE
+    { "type", "name", "range", "survives"
+      "Building", "Internet", "World", TRUE
     }
 
 [effect_internet_2]

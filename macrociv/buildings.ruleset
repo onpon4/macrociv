@@ -68,7 +68,6 @@ graphic	= "b.palace"
 graphic_alt	= "-"
 obsolete_by	=
     { "type", "name", "range"
-      "Gov", "Anarchy", "Player"
     }
 build_cost	= 70
 upkeep		= 0
@@ -103,9 +102,8 @@ _("\
 Under Despotism the city containing the palace gains a +75% \
 gold bonus, and under Monarchy a +50% gold bonus.\
 "), _("\
-Under Anarchy, any existing Palace is obsoleted and a new Palace cannot \
-be built. An Anarchist society never has a capital and gains no benefit \
-from a Palace.\
+Under Anarchy, a Palace cannot be built. An Anarchist society never \
+has a capital and gains no benefit from a Palace.\
 ")
 
 [building_ecclesiastical_palace]
@@ -763,8 +761,8 @@ sound		= "w_seti_program"
 sound_alt	= "w_generic"
 helptext	= _("\
 Gives an immediate technology advance to the player that builds it, \
-and thereafter all cities on the map are continuously visible to its \
-owner despite fog-of-war (except under Revolution or Anarchy).\
+and thereafter all cities on the map are continuously visible to \
+every nation despite fog-of-war.\
 "), _("\
 Completion of this wonder permanently increases the effect of the Computers \
 advance by 50 percentage points for every player.\

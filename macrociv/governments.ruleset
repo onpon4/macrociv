@@ -115,7 +115,9 @@ _("\
  occur.\n\
 * There is no corruption.\n\
 * Base production waste is 30% for all cities.\n\
-* Has a senate that may prevent declaration of war.\
+* Has a senate that may prevent declaration of war.\n\
+* AI players have a tendency to be more hostile toward nations under\
+ this form of government.\
 ")
 
 ;------------------------------------------------------------------------
