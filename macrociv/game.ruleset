@@ -358,6 +358,7 @@ actor_reqs    =
       "DiplRel", "Team", "Local", FALSE
       "UnitState", "OnLivableTile", "Local", TRUE
       "MinMoveFrags", "1", "Local", TRUE
+      "Gov", "Anarchy", "Player", FALSE
     }
 target_reqs  =
     { "type",   "name", "range", "present"
@@ -378,6 +379,7 @@ actor_reqs    =
       "DiplRel", "Team", "Local", FALSE
       "UnitState", "OnLivableTile", "Local", TRUE
       "MinMoveFrags", "1", "Local", TRUE
+      "Gov", "Anarchy", "Player", FALSE
     }
 target_reqs    =
     { "type",   "name", "range", "present"
