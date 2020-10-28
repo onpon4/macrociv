@@ -93,7 +93,6 @@ name        = _("Anarchy")
 ; No reqs
 graphic     = "gov.anarchy"
 graphic_alt = "-"
-ai_better   = "Tribal"
 
 ruler_male_title = _("Comrade %s")
 ruler_female_title = _("?female:Comrade %s")
@@ -103,7 +102,8 @@ Anarchy is a system of government where there is no state or hierarchy.\
  People instead govern themselves, living in communes and practicing\
  various forms of mutual aid rather than giving power to an\
  institution. Citizens are very happy, efficient, and self-sustaining\
- under this form of government, but very unwilling to engage in conquest. Taxes also cannot be collected.\
+ under this form of government, but very unwilling to engage in\
+ conquest. Taxes also cannot be collected since there is no currency.\
 "),
 ; /* xgettext:no-c-format */
 _("\

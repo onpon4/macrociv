@@ -72,6 +72,7 @@ obsolete_by	=
 build_cost	= 70
 upkeep		= 0
 sabotage	= 0
+flags       = "SaveSmallWonder"
 sound		= "b_palace"
 sound_alt	= "b_generic"
 helptext	= _("\
