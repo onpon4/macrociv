@@ -1747,11 +1747,19 @@ type    = "Gain_AI_Love"
 value   = -20
 reqs    =
     { "type", "name", "range"
-      "Building", "Eiffel Tower", "Player"
+      "Gov", "Anarchy", "Player"
     }
 
 [effect_spyresist_anarchy]
 type    = "Spy_Resistant"
+value   = 50
+reqs    =
+    { "type", "name", "range"
+      "Gov", "Anarchy", "Player"
+    }
+
+[effect_migration_anarchy]
+type    = "Migration_Pct"
 value   = 50
 reqs    =
     { "type", "name", "range"
