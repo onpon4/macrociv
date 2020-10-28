@@ -1750,6 +1750,15 @@ reqs    =
       "Gov", "Anarchy", "Player"
     }
 
+[effect_nogold_anarchy]
+type    = "Output_Bonus_2"
+value   = -100
+reqs    =
+    { "type", "name", "range"
+      "Gov", "Anarchy", "Player"
+      "OutputType", "Gold", "Local"
+    }
+
 [effect_spyresist_anarchy]
 type    = "Spy_Resistant"
 value   = 50
