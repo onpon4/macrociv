@@ -811,7 +811,7 @@ set =
       "migration", "ENABLED"
       "mgr_turninterval", 2
       "mgr_foodneeded", "DISABLED"
-      "mgr_distance", 0
+      "mgr_distance", 4
       "mgr_nationchance", 90
       "mgr_worldchance", 30
       "techlevel", 0
@@ -825,6 +825,7 @@ set =
       "onsetbarbs", 0
       "occupychance", 100
       "razechance", 10
+      "savepalace", "DISABLED"
       "techlossforgiveness", 0
       "techlossrestore", -1
       "revolentype", "RANDOM"
