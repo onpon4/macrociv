@@ -1754,9 +1754,9 @@ reqs    =
 type    = "Output_Bonus_2"
 value   = -100
 reqs    =
-    { "type", "name", "range"
-      "Gov", "Anarchy", "Player"
-      "OutputType", "Gold", "Local"
+    { "type", "name", "range", "quiet"
+      "Gov", "Anarchy", "Player", TRUE
+      "OutputType", "Gold", "Local", TRUE
     }
 
 [effect_spyresist_anarchy]

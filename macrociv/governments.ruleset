@@ -99,22 +99,28 @@ ruler_male_title = _("Comrade %s")
 ruler_female_title = _("?female:Comrade %s")
 
 helptext = _("\
-Anarchy is a system where the people govern themselves. Citizens are\
- very happy and self-sustaining under this form of government, but very\
- unwilling to engage in conquest.\
+Anarchy is a system of government where there is no state or hierarchy.\
+ People instead govern themselves, living in communes and practicing\
+ various forms of mutual aid rather than giving power to an\
+ institution. Citizens are very happy, efficient, and self-sustaining\
+ under this form of government, but very unwilling to engage in conquest. Taxes also cannot be collected.\
 "),
 ; /* xgettext:no-c-format */
 _("\
 * Cities produce an extra Food, Shield, or Trade point for every worked\
  land tile that is already producing the respective resource.\n\
 * Technologies do not require any upkeep.\n\
-* Units do not require any shield or gold upkeep (but certain units\
- require food upkeep).\n\
+* Units do not require any shield or gold upkeep.\n\
+* Each city can feed up to 4 units that require food upkeep, or a
+ number of units that require food upkeep equal to the city's size\
+ (whichever is larger); further units that require food upkeep each\
+ cost 1 food per turn.\n\
 * Each aggressively deployed military unit causes 2 unhappy citizens.\n\
 * There is no capital (Palaces have no effect) and civil war cannot\
  occur.\n\
 * There is no corruption.\n\
 * Base production waste is 30% for all cities.\n\
+* Gold cannot be produced (all gold production is eliminated).\n\
 * Has a senate that may prevent declaration of war.\n\
 * AI players have a tendency to be more hostile toward nations under\
  this form of government.\
@@ -150,6 +156,10 @@ _("\
 * Each city gets 1 extra content citizen.\n\
 * Each city can support up to 2 units for free; further units each cost\
  1 shield per turn.\n\
+* Each city can feed up to 4 units that require food upkeep, or a
+ number of units that require food upkeep equal to the city's size\
+ (whichever is larger); further units that require food upkeep each\
+ cost 1 food per turn.\n\
 * Military units do not cause unhappiness even\
  when deployed aggressively.\n\
 * Base corruption is 30% (the highest under any government). This\
@@ -188,6 +198,10 @@ _("\
  (Cities below size 3 will not celebrate.)\n\
 * Each city can support up to 2 units for free; further units each cost\
  1 gold per turn.\n\
+* Each city can feed up to 4 units that require food upkeep, or a
+ number of units that require food upkeep equal to the city's size\
+ (whichever is larger); further units that require food upkeep each\
+ cost 1 food per turn.\n\
 * Military units do not cause unhappiness even\
  when deployed aggressively.\n\
 * Military units impose martial law. Up to 3 military units inside a city\
@@ -226,6 +240,10 @@ _("\
  already producing trade. (Cities below size 3 will not celebrate.)\n\
 * Each city can support up to 3 units for free (the maximum possible);\
  further units each cost 1 gold per turn.\n\
+* Each city can feed up to 4 units that require food upkeep, or a
+ number of units that require food upkeep equal to the city's size\
+ (whichever is larger); further units that require food upkeep each\
+ cost 1 food per turn.\n\
 * Each city tolerates up to 3 aggressively deployed military units;\
  each further unit causes 1 unhappy citizen.\n\
 * Military units impose martial law. Up to 3 military units inside a city\
@@ -266,6 +284,10 @@ Bolshevism is a good government for maximizing shield production, and\
 _("\
 * Each city can support up to 3 units for free (the maximum possible);\
  further units each cost 1 shield per turn.\n\
+* Each city can feed up to 4 units that require food upkeep, or a
+ number of units that require food upkeep equal to the city's size\
+ (whichever is larger); further units that require food upkeep each\
+ cost 1 food per turn.\n\
 * Military units do not cause unhappiness even when deployed aggressively.\n\
 * Military units impose martial law. Up to 3 military units inside a city\
  will each force 2 unhappy citizens to become content (the maximum\
@@ -311,6 +333,10 @@ _("\
 * Base science production is half that of other governments.\n\
 * Each city can support up to 2 units for free; further units each cost\
  2 gold per turn (except for Fanatics).\n\
+* Each city can feed up to 4 units that require food upkeep, or a
+ number of units that require food upkeep equal to the city's size\
+ (whichever is larger); further units that require food upkeep each\
+ cost 1 food per turn.\n\
 * Each city tolerates up to 2 aggressively deployed military units;\
  each further unit causes 1 unhappy citizen.\n\
 * Base corruption is 15%. This increases with distance from the capital\
@@ -346,6 +372,10 @@ _("\
  already producing trade. (Cities below size 3 will not celebrate.)\n\
 * Each city can support up to 2 units for free; further units each cost\
  2 gold per turn.\n\
+* Each city can feed up to 4 units that require food upkeep, or a
+ number of units that require food upkeep equal to the city's size\
+ (whichever is larger); further units that require food upkeep each\
+ cost 1 food per turn.\n\
 * Each city tolerates up to 2 aggressively deployed military units;\
  each further unit causes 1 unhappy citizen.\n\
 * There is no base level of corruption, but an increasing amount\
@@ -387,6 +417,10 @@ _("\
  will not celebrate.)\n\
 * Each city can support one unit for free; further units each cost\
  1 shield per turn.\n\
+* Each city can feed up to 4 units that require food upkeep, or a
+ number of units that require food upkeep equal to the city's size\
+ (whichever is larger); further units that require food upkeep each\
+ cost 1 food per turn.\n\
 * Each city tolerates a single aggressively deployed military unit;\
  each further unit causes 1 unhappy citizen.\n\
 * Base corruption is 25%. This increases with distance from the capital\
@@ -424,6 +458,10 @@ _("\
  will not celebrate.)\n\
 * Each city can support one unit for free; further units each cost\
  2 gold per turn.\n\
+* Each city can feed up to 4 units that require food upkeep, or a
+ number of units that require food upkeep equal to the city's size\
+ (whichever is larger); further units that require food upkeep each\
+ cost 1 food per turn.\n\
 * Each city tolerates a single aggressively deployed military unit;\
  each further unit causes 2 unhappy citizens.\n\
 * Base corruption is 5%. This increases with distance from the capital\

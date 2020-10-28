@@ -900,8 +900,8 @@ name		= _("Coinage")
 genus		= "Special"
 flags		= "Gold"
 reqs	=
-    { "type", "name", "range"
-
+    { "type", "name", "range", "present"
+      "Gov", "Anarchy", "Player", FALSE
     }
 graphic	= "b.capitalization"
 graphic_alt	= "-"
