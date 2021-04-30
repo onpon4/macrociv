@@ -277,9 +277,9 @@ sets this ruleset apart:
 - Global warming and nuclear winter tile changes have been modified to
   be more catastrophic and make a little more sense.
 
-- It now takes longer to clean pollution, and massively longer to clean
-  fallout. This is designed to discourage strategies of "pollute but
-  then clean up", which make no sense and don't work in the real world.
+- It now takes longer to clean pollution and fallout. This is designed
+  to discourage strategies of "pollute but then clean up", which make
+  no sense and don't work in the real world.
 
 - Irrigation and mining transformations are now only possible with
   Engineers, and only after the discovery of Fusion Power. This forces
@@ -305,17 +305,10 @@ sets this ruleset apart:
   substantially, to make these weapons more viable. The new cost of
   Nuclear is now the same as the original cost of Cruise Missile.
 
-- Nuclear-capable nations now get massive AI Love boosts (after the
-  Manhattan Project wonder is built); the effect is doubled with the
-  capability of a nation to use Nuclear ICBMs. This is meant to
-  simulate the real-world fear of Mutually Assured Destruction.
-
 - The discovery of Superconductors (along with the Manhattan Project)
   makes it possible to build Nuclear ICBMs. Nuclear ICBMs are similar to
-  Nuclear, but are able to "paradrop" practically speaking anywhere in
-  the world (given the max range possible for paradrops, 65534). At
-  least one nation being capable of building Nuclear ICBMs doubles the
-  "AI Love" boost granted by the Manhattan Project.
+  Nuclear, but are able to "paradrop" a large distance, effectively
+  extending their range (making them intercontinental, you could say).
 
 - Diplomats and Settlers have both had their build cost reduced, since
   they are (generally) single use units and being expensive makes using

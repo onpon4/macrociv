@@ -2129,7 +2129,7 @@ sound_move    = "m_nuclear"
 sound_move_alt = "m_generic"
 sound_fight   = "f_nuclear"
 sound_fight_alt = "f_generic"
-build_cost    = 50
+build_cost    = 100
 pop_cost      = 0
 attack        = 99
 defense       = 0
@@ -2180,7 +2180,7 @@ sound_move    = "m_nuclear"
 sound_move_alt = "m_generic"
 sound_fight   = "f_nuclear"
 sound_fight_alt = "f_generic"
-build_cost    = 50
+build_cost    = 100
 pop_cost      = 0
 attack        = 99
 defense       = 0
@@ -2218,7 +2218,7 @@ On impact, the blast will destroy any unit in an area 3 tiles wide\
 Nuclear fallout reduces tile output and increases the risk of global\
  nuclear winter; see the help on Fallout.\
 ")
-paratroopers_range = 65534
+paratroopers_range = 128
 paratroopers_mr_req = 16
 paratroopers_mr_sub = 16
 
