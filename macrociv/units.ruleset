@@ -2204,8 +2204,8 @@ veteran_move_bonus = 0
 roles         = ""
 helptext      = _("\
 Nuclear ICBMs are the same as Nuclear units, but they can \"paradrop\"\
- anywhere in the world from a friendly city or airbase, at the cost of\
- 16 movement points, to launch a nuclear strike wherever you need to.\
+ up to 128 tiles away instead of moving normally, at a cost of 16\
+ movement points.\
 "), _("\
 You can build Nuclear units when you have the required advance, and\
  the Manhattan Project wonder has been built by any player.\
